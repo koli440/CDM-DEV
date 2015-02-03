@@ -716,6 +716,91 @@ Work with single product.
                     }
             }
 
+### Save product detail [POST]
++ Request
+	+ Headers
+		
+			WEB-API-key: 3b569c12-6519-4ce3-a112-559218fe5051
+            Authorization: Bearer vF9dft4qmT
+            Lang: cs
+
+	+ Body
+
+			{ 
+                "productId" : 1929391,
+                "accountBalanceEmails" :
+                    [
+                        { "id" : 2345678, "email" : "some@email.eml" },
+                        { "id" : 87654532, "email": "another@email.eml" }
+                    ],
+                "accountBalanceSmsNumbers" :
+                    [
+                        { "id" : 12345235, "number" : "+420666123456" },
+                        { "id" : 745879987, "number": "+420666654321" }
+                    ],
+                "dealsOverviewAddress" :
+                    {
+                        "id" : 52754242,
+                        "addressType" : "DIFF_ADDRESSEE",
+                        "street": "Krymská",
+                        "houseNumber": "793",
+                        "orientationNumber": "56",
+                        "city": "Moskva",
+                        "district": "Staré město",
+                        "zip": 89000,
+                        "countryCode": "RU",
+                        "addition" : "Doplněk adresy",
+                        "differentAddressee" : "Pavel Novák"
+                    },
+                "dealsOverviewEmail" :
+                    { 
+                        "id" : 2345678,
+                        "email" : "some@email.eml" 
+                    },
+                "portfolioOverviewAddress" :
+                    {
+                        "id" : 52754242,
+                        "addressType" : "DIFF_ADDRESSEE",
+                        "street": "Krymská",
+                        "houseNumber": "793",
+                        "orientationNumber": "56",
+                        "city": "Moskva",
+                        "district": "Staré město",
+                        "zip": 89000,
+                        "countryCode": "RU",
+                        "addition" : "Doplněk adresy",
+                        "differentAddressee" : "Pavel Novák"
+                    },
+                "portfolioOverviewEmail" : 
+                    { 
+                        "id" : 2345678,
+                        "email" : "some@email.eml" 
+                    },
+                "statementSerieAddress" : 
+                    {
+                        "id" : 52754242,
+                        "addressType" : "DIFF_ADDRESSEE",
+                        "street": "Krymská",
+                        "houseNumber": "793",
+                        "orientationNumber": "56",
+                        "city": "Moskva",
+                        "district": "Staré město",
+                        "zip": 89000,
+                        "countryCode": "RU",
+                        "addition" : "Doplněk adresy",
+                        "differentAddressee" : "Pavel Novák"
+                    },
+                "statementSerieEmail" :
+                    {
+                        "id" : 2345678,
+                        "email" : "some@email.eml"
+                    }
+            }
+
++ Response 201 (application/json)
+
++ Response 401 (application/json)
+
 ## Product [/products/1929391]
 Fake service for exemple of product with viewType <code>don</code>.
 

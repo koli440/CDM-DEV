@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: https://www.csast.csas.cz/webapi/api/v1
+HOST: https://www.csast.csas.cz/webapi/api/v1/
 
 # DEV SelfService CDM 
 
@@ -182,7 +182,7 @@ All JSON attribures named with <code>code</code> are values from code table, whi
 # Group Client
 APIs for work with 'Client's
 
-## Get client detail [/client]
+## Get client detail [/selfservice/client]
 Secured service to get client detail on SS BL
 
 ### Return desired client detail [GET]
@@ -359,7 +359,7 @@ Saves detail of client to application.
 # Group Addresses
 APIs for work with addresses
 
-## Get client addresses [/addresses]
+## Get client addresses [/selfservice/addresses]
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return adresses of client [GET]
@@ -462,7 +462,7 @@ Creates new address in CRM.
     
 + Response 401 (application/json)
 
-## Get client addresses [/addresses/basic]
+## Get client addresses [/selfservice/addresses/basic]
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return basic adresses of client [GET]
@@ -493,7 +493,7 @@ Returns list of all addresses of type <code>basic</code> stored in CRM for authe
         
 + Response 401 (application/json)
 
-## Get client addresses [/addresses/withAddition]
+## Get client addresses [/selfservice/addresses/withAddition]
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return adresses of client with addition [GET]
@@ -525,7 +525,7 @@ Returns list of all addresses of type <code>withAddition</code> stored  in CRM f
         
 + Response 401 (application/json)
 
-## Get client addresses [/addresses/withDiffAddressee]
+## Get client addresses [/selfservice/addresses/withDiffAddressee]
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return adresses of client [GET]
@@ -558,7 +558,7 @@ Returns list of all addresses of type <code>withDiffAddressee</code> stored in C
         
 + Response 401 (application/json)
 
-## Force Address [/addresses/force]
+## Force Address [/selfservice/addresses/force]
 Service for forcing to store addresse despite its failed validation against RUIAN.
 
 ### Force address [POST]
@@ -612,7 +612,7 @@ Forces storing of address
 # Group Phones
 APIs for work with phone numbers
 
-## Phones [/phones]
+## Phones [/selfservice/phones]
 Work with collection of clients phone numbers
 
 ### Return all phones [GET]
@@ -680,7 +680,7 @@ Work with collection of clients phone numbers
 # Group Emails
 APIs for work with clients emails
 
-## Emails [/emails]
+## Emails [/selfservice/emails]
 Work with collection of clients emails
 
 ### Get all emails [GET]
@@ -741,7 +741,7 @@ Work with collection of clients emails
 # Group Products
 APIs for work with clients products
 
-## Products [/products]
+## Products [/selfservice/products]
 Work with collection of products
 
 ### Get products list [GET]
@@ -767,7 +767,7 @@ Work with collection of products
 
 + Response 401 (application/json)
 
-## Product [/products/{productId}]
+## Product [/selfservice/products/{productId}]
 Work with single product. 
 
 ### Get product detail [GET]
@@ -887,7 +887,7 @@ Work with single product.
 
 + Response 401 (application/json)
 
-## Product [/products/1929391]
+## Product [/selfservice/products/1929391]
 Fake service for exemple of product with viewType <code>don</code>.
 
 ### Get product detail [GET]
@@ -976,7 +976,7 @@ Fake service for exemple of product with viewType <code>don</code>.
 
 + Response 401 (application/json)
 
-## Product [/products/1929392]
+## Product [/selfservice/products/1929392]
 Fake service for exemple of product with viewType <code>eiger</code>.
 
 ### Get product detail [GET]
@@ -1013,7 +1013,7 @@ Fake service for exemple of product with viewType <code>eiger</code>.
 
 + Response 401 (application/json)
 
-## Product [/products/1929393]
+## Product [/selfservice/products/1929393]
 Fake service for exemple of product with viewType <code>s24</code>.
 
 ### Get product detail [GET]
@@ -1064,7 +1064,7 @@ Fake service for exemple of product with viewType <code>s24</code>.
 
 + Response 401 (application/json)
 
-## Product [/products/1929394]
+## Product [/selfservice/products/1929394]
 Fake service for exemple of product with viewType <code>spz</code>.
 
 ### Get product detail [GET]
@@ -1179,7 +1179,7 @@ Fake service for exemple of product with viewType <code>spz</code>.
 
 + Response 401 (application/json)
 
-## Product [/products/1929395]
+## Product [/selfservice/products/1929395]
 Fake service for exemple of product with viewType <code>starBank</code>.
 
 ### Get product detail [GET]
@@ -1355,7 +1355,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
 
 + Response 401 (application/json)
 
-## Product [/products/1929396]
+## Product [/selfservice/products/1929396]
 Fake service for exemple of product with viewType <code>pwc</code>.
 
 ### Get product detail [GET]
@@ -1393,7 +1393,7 @@ Fake service for exemple of product with viewType <code>pwc</code>.
 # Group Attachments
 APIs for work with attachments
 
-## Upload Attachments [/attachments]
+## Upload Attachments [/selfservice/attachments]
 Upload ID Card attachment
 
 ### Upload Image [POST]
@@ -1424,7 +1424,7 @@ Upload ID Card attachment
 
 + Response 401 (application/json)
 
-## Attachments [/attachments/{id}]
+## Attachments [/selfservice/attachments/{id}]
 Work with single attachment
 
 ### Delete Attachment [DELETE]
@@ -1462,7 +1462,7 @@ Work with single attachment
 # Group Applications
 APIs to store and load applications
 
-## Application initialize [/application/init]
+## Application initialize [/selfservice/application/init]
 Initilizes application and returns it's state
 Possible values of applicationState are <code>DATA_ENTRY</code>, <code>CREATED</code>, <code>AUTHORIZED</code>, <code>CANCELED</code>, <code>DENIED</code>, <code>UNFINISHED</code>, <code>FINISHED</code>, <code>SAVED</code>
 
@@ -1482,7 +1482,7 @@ Possible values of applicationState are <code>DATA_ENTRY</code>, <code>CREATED</
 
 + Response 401 (application/json)
 
-## Authorize application [/application/authorize]
+## Authorize application [/selfservice/application/authorize]
 Signs application for authenticated user. Application should be in <code>AUTHORIZED</code> state
 Signs application - after calling this method application should be in <code>AUTHORIZED</code> state.
 
@@ -1586,7 +1586,7 @@ Returns summary of changes in application for review before authorization itself
               ]
             }
 
-## Save Application [/application/save]
+## Save Application [/selfservice/application/save]
 Save application for later.
 
 ### Save application [POST]
@@ -2136,7 +2136,7 @@ Saves application for later. After succesfull call application should be in <cod
 
 + Response 401 (application/json)
 
-## Application detail [/application]
+## Application detail [/selfservice/application]
 Operations with applications
 
 ### Get application detail [GET]
@@ -3286,7 +3286,7 @@ Finalizes applications and prepare it for authorization. After calling this meth
 # Group Code Tables
 APIs for work with code tables
 
-## Get country code table [/codetable/country]
+## Get country code table [/selfservice/codetable/country]
 Secured service to get code table with countries
 
 ### Return country codetable [GET]

@@ -28,7 +28,7 @@ Description Of Usual Server Responses
 -------------------------------------
 * 200 <code>OK</code> - the request was successful (some API calls may return 201 instead).
 * 201 <code>Created</code> - the request was successful and a resource was created.
-* 204 <code>No Content</code> - the request was successful but there is no representation to return (i.e. the response is empty).
+* 204 <code>No Content</code> - the request was successful but there is no representation to return (i.e. the response is empty).pro
 * 400 <code>Bad Request</code> - the request could not be understood or was missing required parameters.
 * 401 <code>Unauthorized</code> - authentication failed or user doesn't have permissions for requested operation.
 * 403 <code>Forbidden</code> - access denied.
@@ -283,8 +283,8 @@ Saves detail of client to application.
 
 	+ Body
 
-        {
-            "firstName": "Jana",
+			{
+			"firstName": "Jana",
             "lastName": "Princeznová",
             "birthName" : "",
             "titleBefore": "Ing.",
@@ -295,7 +295,7 @@ Saves detail of client to application.
             "birthCountryCode": "CZ",
             "citizenshipCountryCode": "CZ",
             "taxResidentCountryCode": "CZ",
-            "identityDocument": 
+            "identityDocument":
                 {
                     "type": "ID_CARD",
                     "number": "12164246",
@@ -303,55 +303,8 @@ Saves detail of client to application.
                     "expireDate": "2019-01-20",
                     "issuer": "MěÚ Jaroměř",
                     "issueCountryCode" : "CZ"
-                },
-            "contacts" : 
-                {
-                "residentAddress":
-                    {
-                    "id" : 528064244,
-                    "addressType" : "BASIC", 
-                    "street": "Polská",
-                    "houseNumber": "22",
-                    "orientationNumber": "3C",
-                    "city": "Jaroměř",
-                    "district": "Staré město",
-                    "zip": 79000,
-                    "countryCode": "CZ"
-                    },
-                "contactAddress":
-                    {
-                    "id" : 52754243,
-                    "addressType" : "BASIC", 
-                    "street": "Finská",
-                    "houseNumber": "145",
-                    "orientationNumber": "387",
-                    "city": "Litvínov",
-                    "district": "Staré město",
-                    "zip": 89000,
-                    "countryCode": "CZ"
-                    },
-                "primaryPhone": 
-                    {
-                        "id" : 12345235,
-                        "number" : "+420666123456"
-                    },
-                "secondaryPhone": 
-                    {
-                        "id" : 745879987,
-                        "number": "+420666654321"
-                    },
-                "primaryEmail": 
-                    { 
-                        "id" : 2345678,
-                        "email" : "some@email.eml"
-                    },
-                "secondaryEmail" :
-                    {
-                        "id" : 87654532,
-                        "email": "another@email.eml"
-                    }
-            }
-        }
+                }
+			}
 
 + Response 201 (application/json)
 
@@ -411,7 +364,54 @@ Returns list of all addresses stored in CRM for authenticated client.
                 "countryCode": "RU",
                 "addition" : "Doplněk adresy",
                 "differentAddressee" : "Pavel Novák"
-            }
+            },
+			"contacts" : 
+                {
+                "residentAddress":
+                    {
+                    "id" : 528064244,
+                    "addressType" : "BASIC", 
+                    "street": "Polská",
+                    "houseNumber": "22",
+                    "orientationNumber": "3C",
+                    "city": "Jaroměř",
+                    "district": "Staré město",
+                    "zip": 79000,
+                    "countryCode": "CZ"
+                    },
+                "contactAddress":
+                    {
+                    "id" : 52754243,
+                    "addressType" : "BASIC", 
+                    "street": "Finská",
+                    "houseNumber": "145",
+                    "orientationNumber": "387",
+                    "city": "Litvínov",
+                    "district": "Staré město",
+                    "zip": 89000,
+                    "countryCode": "CZ"
+                    },
+                "primaryPhone": 
+                    {
+                        "id" : 12345235,
+                        "number" : "+420666123456"
+                    },
+                "secondaryPhone": 
+                    {
+                        "id" : 745879987,
+                        "number": "+420666654321"
+                    },
+                "primaryEmail": 
+                    { 
+                        "id" : 2345678,
+                        "email" : "some@email.eml"
+                    },
+                "secondaryEmail" :
+                    {
+                        "id" : 87654532,
+                        "email": "another@email.eml"
+                    }
+            	}
         ]
         
 + Response 401 (application/json)

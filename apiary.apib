@@ -1,11 +1,10 @@
 FORMAT: 1A
 HOST: https://www.csast.csas.cz/webapi/api/v1
-
+Push back
 # DEV SelfService CDM 
 
 The Web-API is unified project that allow client's access to the 
 internal systems in the Bank thought RESTfull API.
-Force Commit number four
 
 ## Basics
 WEB-API is based on REST principles, all you need to use it is your browser or any 
@@ -28,7 +27,7 @@ Description Of Usual Server Responses
 -------------------------------------
 * 200 <code>OK</code> - the request was successful (some API calls may return 201 instead).
 * 201 <code>Created</code> - the request was successful and a resource was created.
-* 204 <code>No Content</code> - the request was successful but there is no representation to return (i.e. the response is empty).pro
+* 204 <code>No Content</code> - the request was successful but there is no representation to return (i.e. the response is empty).
 * 400 <code>Bad Request</code> - the request could not be understood or was missing required parameters.
 * 401 <code>Unauthorized</code> - authentication failed or user doesn't have permissions for requested operation.
 * 403 <code>Forbidden</code> - access denied.
@@ -183,7 +182,7 @@ All JSON attribures named with <code>code</code> are values from code table, whi
 # Group Client
 APIs for work with 'Client's
 
-## Get client detail [/selfservice/client]
+## Get client detail [/client]
 Secured service to get client detail on SS BL
 
 ### Return desired client detail [GET]
@@ -271,49 +270,10 @@ Returns detail of authenticated client.
 
 + Response 401 (application/json)
 
-### Save client's detail [POST]
-Saves detail of client to application.
-
-+ Request
-    + Headers
-
-            WEB-API-key: 3b569c12-6519-4ce3-a112-559218fe5051
-            Authorization: Bearer vF9dft4qmT
-            Lang: cs
-
-	+ Body
-
-			{
-			"firstName": "Jana",
-            "lastName": "Princeznová",
-            "birthName" : "",
-            "titleBefore": "Ing.",
-            "titleAfter": "Ph.D.",
-            "personalNumber": "7807054421",
-            "birthDate": "1987-07-05",
-            "birthPlace": "Praha",
-            "birthCountryCode": "CZ",
-            "citizenshipCountryCode": "CZ",
-            "taxResidentCountryCode": "CZ",
-            "identityDocument":
-                {
-                    "type": "ID_CARD",
-                    "number": "12164246",
-                    "issueDate": "2011-01-20",
-                    "expireDate": "2019-01-20",
-                    "issuer": "MěÚ Jaroměř",
-                    "issueCountryCode" : "CZ"
-                }
-			}
-
-+ Response 201 (application/json)
-
-+ Response 401 (application/json)
-
 # Group Addresses
 APIs for work with addresses
 
-## Get client addresses [/selfservice/addresses]
+## Get client addresses [/addresses]
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return adresses of client [GET]
@@ -364,54 +324,7 @@ Returns list of all addresses stored in CRM for authenticated client.
                 "countryCode": "RU",
                 "addition" : "Doplněk adresy",
                 "differentAddressee" : "Pavel Novák"
-            },
-			"contacts" : 
-                {
-                "residentAddress":
-                    {
-                    "id" : 528064244,
-                    "addressType" : "BASIC", 
-                    "street": "Polská",
-                    "houseNumber": "22",
-                    "orientationNumber": "3C",
-                    "city": "Jaroměř",
-                    "district": "Staré město",
-                    "zip": 79000,
-                    "countryCode": "CZ"
-                    },
-                "contactAddress":
-                    {
-                    "id" : 52754243,
-                    "addressType" : "BASIC", 
-                    "street": "Finská",
-                    "houseNumber": "145",
-                    "orientationNumber": "387",
-                    "city": "Litvínov",
-                    "district": "Staré město",
-                    "zip": 89000,
-                    "countryCode": "CZ"
-                    },
-                "primaryPhone": 
-                    {
-                        "id" : 12345235,
-                        "number" : "+420666123456"
-                    },
-                "secondaryPhone": 
-                    {
-                        "id" : 745879987,
-                        "number": "+420666654321"
-                    },
-                "primaryEmail": 
-                    { 
-                        "id" : 2345678,
-                        "email" : "some@email.eml"
-                    },
-                "secondaryEmail" :
-                    {
-                        "id" : 87654532,
-                        "email": "another@email.eml"
-                    }
-            	}
+            }
         ]
         
 + Response 401 (application/json)
@@ -463,7 +376,7 @@ Creates new address in CRM.
     
 + Response 401 (application/json)
 
-## Get client addresses [/selfservice/addresses/basic]
+## Get client addresses [/addresses/basic]
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return basic adresses of client [GET]
@@ -494,7 +407,7 @@ Returns list of all addresses of type <code>basic</code> stored in CRM for authe
         
 + Response 401 (application/json)
 
-## Get client addresses [/selfservice/addresses/withAddition]
+## Get client addresses [/addresses/withAddition]
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return adresses of client with addition [GET]
@@ -526,7 +439,7 @@ Returns list of all addresses of type <code>withAddition</code> stored  in CRM f
         
 + Response 401 (application/json)
 
-## Get client addresses [/selfservice/addresses/withDiffAddressee]
+## Get client addresses [/addresses/withDiffAddressee]
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return adresses of client [GET]
@@ -559,7 +472,7 @@ Returns list of all addresses of type <code>withDiffAddressee</code> stored in C
         
 + Response 401 (application/json)
 
-## Force Address [/selfservice/addresses/force]
+## Force Address [/addresses/force]
 Service for forcing to store addresse despite its failed validation against RUIAN.
 
 ### Force address [POST]
@@ -613,7 +526,7 @@ Forces storing of address
 # Group Phones
 APIs for work with phone numbers
 
-## Phones [/selfservice/phones]
+## Phones [/phones]
 Work with collection of clients phone numbers
 
 ### Return all phones [GET]
@@ -681,7 +594,7 @@ Work with collection of clients phone numbers
 # Group Emails
 APIs for work with clients emails
 
-## Emails [/selfservice/emails]
+## Emails [/emails]
 Work with collection of clients emails
 
 ### Get all emails [GET]
@@ -742,7 +655,7 @@ Work with collection of clients emails
 # Group Products
 APIs for work with clients products
 
-## Products [/selfservice/products]
+## Products [/products]
 Work with collection of products
 
 ### Get products list [GET]
@@ -768,7 +681,7 @@ Work with collection of products
 
 + Response 401 (application/json)
 
-## Product [/selfservice/products/{productId}]
+## Product [/products/{productId}]
 Work with single product. 
 
 ### Get product detail [GET]
@@ -803,92 +716,7 @@ Work with single product.
                     }
             }
 
-### Save product detail [POST]
-+ Request
-	+ Headers
-		
-			WEB-API-key: 3b569c12-6519-4ce3-a112-559218fe5051
-            Authorization: Bearer vF9dft4qmT
-            Lang: cs
-
-	+ Body
-
-			{ 
-                "productId" : 1929391,
-                "accountBalanceEmails" :
-                    [
-                        { "id" : 2345678, "email" : "some@email.eml" },
-                        { "id" : 87654532, "email": "another@email.eml" }
-                    ],
-                "accountBalanceSmsNumbers" :
-                    [
-                        { "id" : 12345235, "number" : "+420666123456" },
-                        { "id" : 745879987, "number": "+420666654321" }
-                    ],
-                "dealsOverviewAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
-                    },
-                "dealsOverviewEmail" :
-                    { 
-                        "id" : 2345678,
-                        "email" : "some@email.eml" 
-                    },
-                "portfolioOverviewAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
-                    },
-                "portfolioOverviewEmail" : 
-                    { 
-                        "id" : 2345678,
-                        "email" : "some@email.eml" 
-                    },
-                "statementSerieAddress" : 
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
-                    },
-                "statementSerieEmail" :
-                    {
-                        "id" : 2345678,
-                        "email" : "some@email.eml"
-                    }
-            }
-
-+ Response 201 (application/json)
-
-+ Response 401 (application/json)
-
-## Product [/selfservice/products/1929391]
+## Product [/products/1929391]
 Fake service for exemple of product with viewType <code>don</code>.
 
 ### Get product detail [GET]
@@ -977,7 +805,7 @@ Fake service for exemple of product with viewType <code>don</code>.
 
 + Response 401 (application/json)
 
-## Product [/selfservice/products/1929392]
+## Product [/products/1929392]
 Fake service for exemple of product with viewType <code>eiger</code>.
 
 ### Get product detail [GET]
@@ -1014,7 +842,7 @@ Fake service for exemple of product with viewType <code>eiger</code>.
 
 + Response 401 (application/json)
 
-## Product [/selfservice/products/1929393]
+## Product [/products/1929393]
 Fake service for exemple of product with viewType <code>s24</code>.
 
 ### Get product detail [GET]
@@ -1065,7 +893,7 @@ Fake service for exemple of product with viewType <code>s24</code>.
 
 + Response 401 (application/json)
 
-## Product [/selfservice/products/1929394]
+## Product [/products/1929394]
 Fake service for exemple of product with viewType <code>spz</code>.
 
 ### Get product detail [GET]
@@ -1180,7 +1008,7 @@ Fake service for exemple of product with viewType <code>spz</code>.
 
 + Response 401 (application/json)
 
-## Product [/selfservice/products/1929395]
+## Product [/products/1929395]
 Fake service for exemple of product with viewType <code>starBank</code>.
 
 ### Get product detail [GET]
@@ -1356,7 +1184,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
 
 + Response 401 (application/json)
 
-## Product [/selfservice/products/1929396]
+## Product [/products/1929396]
 Fake service for exemple of product with viewType <code>pwc</code>.
 
 ### Get product detail [GET]
@@ -1394,7 +1222,7 @@ Fake service for exemple of product with viewType <code>pwc</code>.
 # Group Attachments
 APIs for work with attachments
 
-## Upload Attachments [/selfservice/attachments]
+## Upload Attachments [/attachments]
 Upload ID Card attachment
 
 ### Upload Image [POST]
@@ -1425,7 +1253,7 @@ Upload ID Card attachment
 
 + Response 401 (application/json)
 
-## Attachments [/selfservice/attachments/{id}]
+## Attachments [/attachments/{id}]
 Work with single attachment
 
 ### Delete Attachment [DELETE]
@@ -1463,7 +1291,7 @@ Work with single attachment
 # Group Applications
 APIs to store and load applications
 
-## Application initialize [/selfservice/application/init]
+## Application initialize [/application/init]
 Initilizes application and returns it's state
 Possible values of applicationState are <code>DATA_ENTRY</code>, <code>CREATED</code>, <code>AUTHORIZED</code>, <code>CANCELED</code>, <code>DENIED</code>, <code>UNFINISHED</code>, <code>FINISHED</code>, <code>SAVED</code>
 
@@ -1483,7 +1311,7 @@ Possible values of applicationState are <code>DATA_ENTRY</code>, <code>CREATED</
 
 + Response 401 (application/json)
 
-## Authorize application [/selfservice/application/authorize]
+## Authorize application [/application/authorize]
 Signs application for authenticated user. Application should be in <code>AUTHORIZED</code> state
 Signs application - after calling this method application should be in <code>AUTHORIZED</code> state.
 
@@ -1587,7 +1415,7 @@ Returns summary of changes in application for review before authorization itself
               ]
             }
 
-## Save Application [/selfservice/application/save]
+## Save Application [/application/save]
 Save application for later.
 
 ### Save application [POST]
@@ -2137,7 +1965,7 @@ Saves application for later. After succesfull call application should be in <cod
 
 + Response 401 (application/json)
 
-## Application detail [/selfservice/application]
+## Application detail [/application]
 Operations with applications
 
 ### Get application detail [GET]
@@ -3287,7 +3115,7 @@ Finalizes applications and prepare it for authorization. After calling this meth
 # Group Code Tables
 APIs for work with code tables
 
-## Get country code table [/selfservice/codetable/country]
+## Get country code table [/codetable/country]
 Secured service to get code table with countries
 
 ### Return country codetable [GET]

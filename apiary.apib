@@ -8,7 +8,7 @@ internal systems in the Bank thought RESTfull API.
 
 ## Basics
 WEB-API is based on REST principles, all you need to use it is your browser or any 
-other http client. You have to be authenticated and call the simple HTTPs request 
+other http client. You have to be authenticated and  call the simple HTTPs request 
 on the URL specified below. The following documentation covers core resources 
 that are used to manipulate with the main entities. 
 
@@ -277,7 +277,7 @@ APIs for work with addresses
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return adresses of client [GET]
-Returns list of all addresses stored in CRM for authenticated client. This resource returns all addresses binded to authenticated client, regardless their [type][Address type].
+Returns list of all addresses stored in CRM for authenticated client. This resource returns all addresses binded to authenticated client, regardless of their type.
 
 + Request
     + Headers
@@ -330,7 +330,7 @@ Returns list of all addresses stored in CRM for authenticated client. This resou
 + Response 401 (application/json)
 
 ### Create new address [POST]
-Creates new address in CRM. Following attributes must be specified in request (according to their required / optional specification). You need to specify type of provided address ([see address types][Address type]) . 
+Creates new address in CRM. Following attributes must be specified in request (according to their required / optional specification). You need to specify type of provided address (see Address type). 
 
 | attribute | type | description | required / optional |
 | ------ | ------ | ------ | ------ |
@@ -473,10 +473,10 @@ Returns list of all addresses of type <code>withDiffAddressee</code> stored in C
 + Response 401 (application/json)
 
 ## Force Address [/selfservice/addresses/force]
-Service for forcing to store addresse despite its failed validation against RUIAN.
+Service for forcing to store addresse despite its failed validation against RUIAN. Following attributes must be specified in request (according to their required / optional specification). You need to specify type of provided address (see Address type). 
 
 ### Force address [POST]
-Forces storing of address
+Forces storing of address.
 
 | attribute | type | description | required / optional |
 | ------ | ------ | ------ | ------ |
@@ -530,6 +530,7 @@ APIs for work with phone numbers
 Work with collection of clients phone numbers
 
 ### Return all phones [GET]
+Returns all phone numbers stored for authenticated user. Phone numbers are returned with country code and without spaces.
 
 + Request
     + Headers
@@ -565,6 +566,7 @@ Work with collection of clients phone numbers
 + Response 401 (application/json)
 
 ### Add new phone [POST]
+Creates new phone number and binds it to authenticated user, so next time it will be returned along with other phone numbers. You need to specify only phone number itself in request. Format is full number with country code without spaces 
 
 | attribute | type | description | required / optional |
 | ------ | ------ | ------ | ------ |
@@ -598,6 +600,7 @@ APIs for work with clients emails
 Work with collection of clients emails
 
 ### Get all emails [GET]
+Returns all emails binded to authenticated client.
 
 + Request
     + Headers
@@ -626,6 +629,7 @@ Work with collection of clients emails
 + Response 401 (application/json)
 
 ### Add new email address [POST]
+Creates new email and binds it to authenticated client, so next time it will be returned along with other emails. You need to specify only email itself, standard email validation in place.
 
 | attribute | type | description | required / optional |
 | ------ | ------ | ------ | ------ |
@@ -659,6 +663,7 @@ APIs for work with clients products
 Work with collection of products
 
 ### Get products list [GET]
+Returns list of all products, that have any relation to authenticated client. This method returns only data needed for product listing. Product detail is returned by other service.
 
 + Request
     + Headers
@@ -685,9 +690,11 @@ Work with collection of products
 Work with single product. 
 
 ### Get product detail [GET]
+Returns detail information of product with <code>productId</code> specified in request. To get all product ids, you need to call /selfservice/products method. There are seven types of product view (see Product view type), which determines what attributes will be returned and how they will be represented in presentation layer. For more info you check ProductView Class Diagram.
+
 + Parameters
 
-    + productId (required, number, `1234654`) ... ID of requested `product.
+    + productId (required, number, `1234654`) ... ID of requested `product`.
 
 + Request
     + Headers
@@ -1226,6 +1233,7 @@ APIs for work with attachments
 Upload ID Card attachment
 
 ### Upload Image [POST]
+This service allows you to upload image of attachment to our server. This is intended for uploading images of identity card. Attachment is allways converted to .pdf on our back-end. In case there are two images uploaded (two calls of this service) our back-end will merge this to one .pdf. Uploaded image should be referenced by returned id.
 
 + Request
     + Headers
@@ -1257,6 +1265,8 @@ Upload ID Card attachment
 Work with single attachment
 
 ### Delete Attachment [DELETE]
+This service will delete all attachments associated with current application.
+
 + Request
     + Headers
 
@@ -1266,6 +1276,8 @@ Work with single attachment
 + Response 204 (application/json) 
 
 ### Get Attachment [GET]
+Returns attachment associated with current application, it is always an .pdf file. If there were two images uploaded, they are merged to one .pdf and returned under one id.
+
 + Request
     + Headers
 
@@ -1312,11 +1324,15 @@ Possible values of applicationState are <code>DATA_ENTRY</code>, <code>CREATED</
 + Response 401 (application/json)
 
 ## Authorize application [/selfservice/application/authorize]
-Signs application for authenticated user. Application should be in <code>AUTHORIZED</code> state
 Signs application - after calling this method application should be in <code>AUTHORIZED</code> state.
 
 ### Authorize application [POST]
-Authorize application.
+This method authorizes application and proceeds it to next state in it's life cycle. Following parameters should be provided. 
+
+| attribute | type | description | required / optional |
+| ------ | ------ | ------ | ------ |
+| timestamp | DateTime | Date and time when user requested authorization | required |
+| authorizationCode | String | String with SMS authorization code, if used channel is Service24. In other channels there is authorization made out of application | _optional_ |
 
 + Request
     + Headers
@@ -1337,7 +1353,7 @@ Authorize application.
 + Response 401 (application/json)
 
 ### Get authorization summary [GET]
-Returns summary of changes in application for review before authorization itself
+Returns summary of changes in application for review before authorization itself. It is returned in universal format to display information in sections. There is attribute "Changed" in JSON, which specifiel if value was changed by client or not
 
 + Request
     + Headers
@@ -1357,9 +1373,9 @@ Returns summary of changes in application for review before authorization itself
                           "sectionName" : "Klient",
                           "labelsAndValues" : 
                           [
-                              { "label" : "Jméno a příjmení", "value" : "Tomáš Spořitelní" },
-                              { "label" : "Rodné číslo", "value" : "7853154452" },
-                              { "label" : "IČO", "value" : "9999999990" }
+                              { "label" : "Jméno a příjmení", "value" : "Tomáš Spořitelní", "changed" : true },
+                              { "label" : "Rodné číslo", "value" : "7853154452", "changed" : false },
+                              { "label" : "IČO", "value" : "9999999990", "changed" : true }
                           ]
                       }
                   },
@@ -1369,11 +1385,11 @@ Returns summary of changes in application for review before authorization itself
                           "sectionName" : "Kontaktní adresa",
                           "labelsAndValues" : 
                           [
-                              { "label" : "Ulice", "value" : "Pod Javorem" },
-                              { "label" : "Číslo popisné", "value" : "15" },
-                              { "label" : "Město", "value" : "Brno" },
-                              { "label" : "PSČ", "value" : "62100" },
-                              { "label" : "Země", "value" : "CZ" }
+                              { "label" : "Ulice", "value" : "Pod Javorem", "changed" : false },
+                              { "label" : "Číslo popisné", "value" : "15", "changed" : false },
+                              { "label" : "Město", "value" : "Brno", "changed" : true },
+                              { "label" : "PSČ", "value" : "62100", "changed" : true },
+                              { "label" : "Země", "value" : "CZ", "changed" : false }
                           ]
                       }
                   },
@@ -1383,10 +1399,10 @@ Returns summary of changes in application for review before authorization itself
                           "sectionName" : "Další kontaktní údaje",
                           "labelsAndValues" : 
                           [
-                              { "label" : "Kontaktní adresa", "value" : "Boženy Němcové 1231/25, 140 00, Praha 4" },
-                              { "label" : "Telefonní číslo", "value" : "+420 956 777 956" },
-                              { "label" : "Telefonní číslo 2", "value" : "420 956 777 957" },
-                              { "label" : "E-mailová adresa", "value" : "tsporitelni@gmail.com" }
+                              { "label" : "Kontaktní adresa", "value" : "Boženy Němcové 1231/25, 140 00, Praha 4", "changed" : false },
+                              { "label" : "Telefonní číslo", "value" : "+420 956 777 956", "changed" : true },
+                              { "label" : "Telefonní číslo 2", "value" : "420 956 777 957", "changed" : true },
+                              { "label" : "E-mailová adresa", "value" : "tsporitelni@gmail.com", "changed" : false }
                           ]
                       }
                   },
@@ -1396,7 +1412,7 @@ Returns summary of changes in application for review before authorization itself
                           "sectionName" : "Běžný produkt - 1234-9876543210/0800",
                           "labelsAndValues" : 
                           [
-                              { "label" : "Kontaktní adresa", "value" : "Horova 1115/8, 400 01, Liberec" }
+                              { "label" : "Kontaktní adresa", "value" : "Horova 1115/8, 400 01, Liberec", "changed" : true }
                           ]
                       }
                   },
@@ -1406,9 +1422,9 @@ Returns summary of changes in application for review before authorization itself
                           "sectionName" : "Účet - 1234-9876543210/0800",
                           "labelsAndValues" : 
                           [
-                              { "label" : "Adresa pro výpis A", "value" : "Horova 1115/8, 400 01, Liberec" },
-                              { "label" : "Informační SMS pro neprovedené inkaso 2", "value" : "+420 602 345 678" },
-                              { "label" : "Emailová adresa pro změnu zůstatku na účtu 3", "value" : "tomas.sporitelni@seznam.cz" }
+                              { "label" : "Adresa pro výpis A", "value" : "Horova 1115/8, 400 01, Liberec", "changed" : false },
+                              { "label" : "Informační SMS pro neprovedené inkaso 2", "value" : "+420 602 345 678", "changed" : true },
+                              { "label" : "Emailová adresa pro změnu zůstatku na účtu 3", "value" : "tomas.sporitelni@seznam.cz", "changed" : false }
                           ]
                       }
                   }
@@ -1419,7 +1435,7 @@ Returns summary of changes in application for review before authorization itself
 Save application for later.
 
 ### Save application [POST]
-Saves application for later. After succesfull call application should be in <code>SAVED</code> state.
+Saves application for later. After succesfull call application should be in <code>SAVED</code> state. Whole application must be uploaded by this method.
 
 + Request
     + Headers
@@ -1969,6 +1985,7 @@ Saves application for later. After succesfull call application should be in <cod
 Operations with applications
 
 ### Get application detail [GET]
+Returns detail of saved application. Whole application with fresh data is returned.
 
 + Request
     + Headers
@@ -2555,7 +2572,7 @@ Operations with applications
 + Response 401 (application/json)
 
 ### Finalize application [POST]
-Finalizes applications and prepare it for authorization. After calling this method, application should be in <code>FINISHED</code> state.
+Finalizes applications and prepare it for authorization. After calling this method, application should be in <code>FINISHED</code> state. After that application could be athorized. Server validation occurs!
 
 + Request
     + Headers
@@ -3102,6 +3119,8 @@ Finalizes applications and prepare it for authorization. After calling this meth
 + Response 401 (application/json)
 
 ### Cancel application [DELETE]
+Cancels current application and user can start again from scratch or do not apply at all.
+
 + Request
     + Headers
 

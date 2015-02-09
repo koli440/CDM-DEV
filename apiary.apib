@@ -831,6 +831,7 @@ Fake service for exemple of product with viewType <code>eiger</code>.
                 "viewType" : "EIGER",
                 "relation" : "Vlastník",
                 "secure3dPhoneNumber" : "+420 666 777 888",
+                "issueNewCard" : true,
                 "pinRecoveryAddress" :
                     {
                         "id" : 52754242,
@@ -1209,6 +1210,7 @@ Fake service for exemple of product with viewType <code>pwc</code>.
                 "productId" : 1929396,
                 "viewType" : "PWC",
                 "relation" : "Vlastník",
+                "issueNewCard" : true,
                 "cardPinDeliveryAddress" : 
                     {
                         "id" : 52754243,
@@ -1509,7 +1511,8 @@ Saves application for later. After succesfull call application should be in <cod
                         },
                         {
                             "productId" : 1929392,
-                            "pinRecoveryAddress" : { "id" : 52754242 }
+                            "pinRecoveryAddress" : { "id" : 52754242 },
+                            "issueNewCard" : true
                         },
                         {
                             "productId" : 1929393,
@@ -1600,6 +1603,7 @@ Saves application for later. After succesfull call application should be in <cod
                         },
                         {
                             "productId" : 1929396,
+                            "issueNewCard" : true,
                             "cardPinDeliveryAddress" : { "id" : 52754243 }
                         }
                     ]
@@ -1858,6 +1862,7 @@ Returns detail of saved application. Whole application with fresh data is return
                     "relation" : "Vlastník",
                     "cardNumber" : "5380 34** **** 1453",
                     "3dSecurePhoneNumber" : "+420 666 777 888",
+                    "issueNewCard" : true,
                     "pinRecoveryAddress" :
                         {
                             "id" : 52754242,
@@ -2181,6 +2186,7 @@ Returns detail of saved application. Whole application with fresh data is return
                     "viewType" : "PWC",
                     "relation" : "Vlastník",
                     "cardNumber" : "5380 34** **** 1453",
+                    "issueNewCard" : true,
                     "cardPinDeliveryAddress" : 
                         {
                             "id" : 52754243,
@@ -2275,6 +2281,7 @@ Finalizes applications and prepare it for authorization. After calling this meth
                         },
                         {
                             "productId" : 1929392,
+                            "issueNewCard" : true,
                             "pinRecoveryAddress" : { "id" : 52754242 }
                         },
                         {
@@ -2366,6 +2373,7 @@ Finalizes applications and prepare it for authorization. After calling this meth
                         },
                         {
                             "productId" : 1929396,
+                            "issueNewCard" : true,
                             "cardPinDeliveryAddress" : { "id" : 52754243 }
                         }
                     ]

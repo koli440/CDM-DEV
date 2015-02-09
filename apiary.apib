@@ -2240,228 +2240,51 @@ Finalizes applications and prepare it for authorization. After calling this meth
                             },
                         "contacts" : 
                             {
-                            "residentAddress":
-                                {
-                                "id" : 528064244,
-                                "addressType" : "BASIC",
-                                "street": "Polská",
-                                "houseNumber": "22",
-                                "orientationNumber": "3C",
-                                "city": "Jaroměř",
-                                "district": "Staré město",
-                                "zip": 79000,
-                                "countryCode": "CZ"
-                                },
-                            "contactAddress":
-                                {
-                                "id" : 52754243,
-                                "addressType" : "BASIC",
-                                "street": "Finská",
-                                "houseNumber": "145",
-                                "orientationNumber": "387",
-                                "city": "Litvínov",
-                                "district": "Staré město",
-                                "zip": 89000,
-                                "countryCode": "CZ"
-                                },
-                            "primaryPhone": 
-                                {
-                                    "id" : 12345235,
-                                    "number" : "+420666123456"
-                                },
-                            "secondaryPhone": 
-                                {
-                                    "id" : 745879987,
-                                    "number": "+420666654321"
-                                },
-                            "primaryEmail": 
-                                { 
-                                    "id" : 2345678,
-                                    "email" : "some@email.eml"
-                                },
-                            "secondaryEmail" :
-                                {
-                                    "id" : 87654532,
-                                    "email": "another@email.eml"
-                                }
+                            "residentAddress": { "id" : 528064244 },
+                            "contactAddress": { "id" : 52754243 },
+                            "primaryPhone": { "id" : 12345235 },
+                            "secondaryPhone": { "id" : 745879987 },
+                            "primaryEmail": { "id" : 2345678 },
+                            "secondaryEmail" : { "id" : 87654532 }
                             }
                     },
-                    "addresses" :
-                    [
-                        {
-                            "id" : 528064244,
-                            "addressType" : "BASIC",
-                            "street": "Polská",
-                            "houseNumber": "22",
-                            "orientationNumber": "3C",
-                            "city": "Jaroměř",
-                            "district": "Staré město",
-                            "zip": 79000,
-                            "countryCode": "CZ"
-                        },
-                        {
-                            "id" : 52754243,
-                            "addressType" : "ADDITION",
-                            "street": "Finská",
-                            "houseNumber": "145",
-                            "orientationNumber": "387",
-                            "city": "Litvínov",
-                            "district": "Staré město",
-                            "zip": 89000,
-                            "countryCode": "CZ",
-                            "addition" : "Doplněk adresy"
-                        },
-                        {
-                            "id" : 52754242,
-                            "addressType" : "DIFF_ADDRESSEE",
-                            "street": "Krymská",
-                            "houseNumber": "793",
-                            "orientationNumber": "56",
-                            "city": "Moskva",
-                            "district": "Staré město",
-                            "zip": 89000,
-                            "countryCode": "RU",
-                            "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
-                        }
-                    ],
-                    "phones" :
-                    [
-                        { "id" : 12345235, "number" : "+420666123456" },
-                        { "id" : 745879987, "number": "+420666654321" },
-                        { "id" : 987656782, "number": "+420666656543" },
-                        { "id" : 987656783, "number": "+420666656542" },
-                        { "id" : 987656784, "number": "+420666626543" }
-                    ],
-                    "emails" :
-                    [
-                        { "id" : 2345678, "email": "some@email.eml" },
-                        { "id" : 87654532, "email": "another@email.eml" },
-                        { "id" : 78355820, "email": "yet.another@email.eml" }
-                    ],
                     "products" :
                     [
                         { 
                             "productId" : 1929390,
-                            "contactAddress" :
-                                {
-                                    "id" : 528064244,
-                                    "addressType" : "BASIC",
-                                    "street": "Polská",
-                                    "houseNumber": "22",
-                                    "orientationNumber": "3C",
-                                    "city": "Jaroměř",
-                                    "district": "Staré město",
-                                    "zip": 79000,
-                                    "countryCode": "CZ"
-                                }
+                            "contactAddress" : { "id" : 528064244 }
                         },
                         { 
                             "productId" : 1929391,
                             "accountBalanceEmails" :
                                 [
-                                    { "id" : 2345678, "email" : "some@email.eml" },
-                                    { "id" : 87654532, "email": "another@email.eml" }
+                                    { "id" : 2345678 },
+                                    { "id" : 87654532 }
                                 ],
                             "accountBalanceSmsNumbers" :
                                 [
-                                    { "id" : 12345235, "number" : "+420666123456" },
-                                    { "id" : 745879987, "number": "+420666654321" }
+                                    { "id" : 12345235 },
+                                    { "id" : 745879987 }
                                 ],
-                            "dealsOverviewAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "dealsOverviewEmail" :
-                                { 
-                                    "id" : 2345678,
-                                    "email" : "some@email.eml" 
-                                },
-                            "portfolioOverviewAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "portfolioOverviewEmail" : 
-                                { 
-                                    "id" : 2345678,
-                                    "email" : "some@email.eml" 
-                                },
-                            "statementSerieAddress" : 
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "statementSerieEmail" :
-                                {
-                                    "id" : 2345678,
-                                    "email" : "some@email.eml"
-                                }
+                            "dealsOverviewAddress" : { "id" : 52754242 },
+                            "dealsOverviewEmail" : { "id" : 2345678 },
+                            "portfolioOverviewAddress" : { "id" : 52754242 },
+                            "portfolioOverviewEmail" :  { "id" : 2345678 },
+                            "statementSerieAddress" : { "id" : 52754242 },
+                            "statementSerieEmail" : { "id" : 2345678 }
                         },
                         {
                             "productId" : 1929392,
-                            "pinRecoveryAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                }
+                            "pinRecoveryAddress" : { "id" : 52754242 }
                         },
                         {
                             "productId" : 1929393,
-                            "contactAddress" :
-                                {
-                                    "id" : 528064244,
-                                    "addressType" : "BASIC",
-                                    "street": "Polská",
-                                    "houseNumber": "22",
-                                    "orientationNumber": "3C",
-                                    "city": "Jaroměř",
-                                    "district": "Staré město",
-                                    "zip": 79000,
-                                    "countryCode": "CZ"
-                                },
+                            "contactAddress" : { "id" : 528064244 },
                             "eInvoiceEmails" : 
                                 [
-                                    { "id" : 2345678, "email" : "some@email.eml" },
-                                    { "id" : 87654532, "email": "another@email.eml" },
-                                    { "id" : 78355820, "email": "yet.another@email.eml" }
+                                    { "id" : 2345678 },
+                                    { "id" : 87654532 },
+                                    { "id" : 78355820 }
                                 ],
                             "eInvoicePhoneNumbers" : 
                                 [
@@ -2474,270 +2297,76 @@ Finalizes applications and prepare it for authorization. After calling this meth
                             "productId" : 1929394,
                             "accountBalanceEmails" : 
                                 [
-                                    { "id" : 2345678, "email" : "some@email.eml" },
-                                    { "id" : 87654532, "email": "another@email.eml" }
+                                    { "id" : 2345678 },
+                                    { "id" : 87654532 }
                                 ],
-                            "accountBalanceSmsNumber" : { "id" : 12345235, "number" : "+420666123456" },
+                            "accountBalanceSmsNumber" : { "id" : 12345235 },
                             "adviceEmails" : 
                                 [
-                                    { "id" : 2345678, "email" : "some@email.eml" },
-                                    { "id" : 87654532, "email": "another@email.eml" }
+                                    { "id" : 2345678 },
+                                    { "id" : 87654532 }
                                 ],
                             "cardOperationSmsNumbers" : 
                                 [
-                                    { "id" : 12345235, "number" : "+420666123456" },
-                                    { "id" : 745879987, "number": "+420666654321" },
-                                    { "id" : 987656782, "number": "+420666656543" },
-                                    { "id" : 987656783, "number": "+420666656542" },
-                                    { "id" : 987656784, "number": "+420666626543" }
+                                    { "id" : 12345235 },
+                                    { "id" : 745879987 },
+                                    { "id" : 987656782 },
+                                    { "id" : 987656783 },
+                                    { "id" : 987656784 }
                                 ],
                             "failedDirectDebitSmsNumber" : 
                                 [
-                                    { "id" : 12345235, "number" : "+420666123456" },
-                                    { "id" : 745879987, "number": "+420666654321" },
-                                    { "id" : 987656782, "number": "+420666656543" },
-                                    { "id" : 987656783, "number": "+420666656542" },
-                                    { "id" : 987656784, "number": "+420666626543" }
+                                    { "id" : 12345235 },
+                                    { "id" : 745879987 },
+                                    { "id" : 987656782 },
+                                    { "id" : 987656783 },
+                                    { "id" : 987656784 }
                                 ],
                             "kontokorentMaturitySmsNumber" :
                                 [
-                                    { "id" : 12345235, "number" : "+420666123456" },
-                                    { "id" : 745879987, "number": "+420666654321" },
-                                    { "id" : 987656782, "number": "+420666656543" },
-                                    { "id" : 987656783, "number": "+420666656542" },
-                                    { "id" : 987656784, "number": "+420666626543" }
+                                    { "id" : 12345235 },
+                                    { "id" : 745879987 },
+                                    { "id" : 987656782 },
+                                    { "id" : 987656783 },
+                                    { "id" : 987656784 }
                                 ],
                             "failedReccuringPaymentSmsNumber" :
                                 [
-                                    { "id" : 12345235, "number" : "+420666123456" },
-                                    { "id" : 745879987, "number": "+420666654321" },
-                                    { "id" : 987656782, "number": "+420666656543" },
-                                    { "id" : 987656783, "number": "+420666656542" },
-                                    { "id" : 987656784, "number": "+420666626543" }
+                                    { "id" : 12345235 },
+                                    { "id" : 745879987 },
+                                    { "id" : 987656782 },
+                                    { "id" : 987656783 },
+                                    { "id" : 987656784 }
                                 ],
                             "failedSinglePaymentSmsNumber" :
                                 [
-                                    { "id" : 12345235, "number" : "+420666123456" },
-                                    { "id" : 745879987, "number": "+420666654321" },
-                                    { "id" : 987656782, "number": "+420666656543" },
-                                    { "id" : 987656783, "number": "+420666656542" },
-                                    { "id" : 987656784, "number": "+420666626543" }
+                                    { "id" : 12345235 },
+                                    { "id" : 745879987 },
+                                    { "id" : 987656782 },
+                                    { "id" : 987656783 },
+                                    { "id" : 987656784 }
                                 ],
-                            "serieAStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "serieBStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "serieCStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                }
+                            "serieAStatementAddress" : { "id" : 52754242 },
+                            "serieBStatementAddress" : { "id" : 52754242 },
+                            "serieCStatementAddress" : { "id" : 52754242 }
                         },
                         {
                             "productId" : 1929395,
-                            "notificationAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "correspondenceAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "serieAStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "serieBStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "serieCStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "serieDStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "serieEStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "serieFStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "serieGStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "serieHStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                },
-                            "serieIStatementAddress" :
-                                {
-                                    "id" : 52754242,
-                                    "addressType" : "DIFF_ADDRESSEE",
-                                    "street": "Krymská",
-                                    "houseNumber": "793",
-                                    "orientationNumber": "56",
-                                    "city": "Moskva",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "RU",
-                                    "addition" : "Doplněk adresy",
-                                    "differentAddressee" : "Pavel Novák"
-                                }
+                            "notificationAddress" : { "id" : 52754242 },
+                            "correspondenceAddress" : { "id" : 52754242 },
+                            "serieAStatementAddress" : { "id" : 52754242 },
+                            "serieBStatementAddress" : { "id" : 52754242 },
+                            "serieCStatementAddress" : { "id" : 52754242 },
+                            "serieDStatementAddress" : { "id" : 52754242 },
+                            "serieEStatementAddress" : { "id" : 52754242 },
+                            "serieFStatementAddress" : { "id" : 52754242 },
+                            "serieGStatementAddress" : { "id" : 52754242 },
+                            "serieHStatementAddress" : { "id" : 52754242 },
+                            "serieIStatementAddress" : { "id" : 52754242 }
                         },
                         {
                             "productId" : 1929396,
-                            "cardPinDeliveryAddress" : 
-                                {
-                                    "id" : 52754243,
-                                    "addressType" : "ADDITION",
-                                    "street": "Finská",
-                                    "houseNumber": "145",
-                                    "orientationNumber": "387",
-                                    "city": "Litvínov",
-                                    "district": "Staré město",
-                                    "zip": 89000,
-                                    "countryCode": "CZ",
-                                    "addition" : "Doplněk adresy"
-                                }
+                            "cardPinDeliveryAddress" : { "id" : 52754243 }
                         }
                     ]
                 }

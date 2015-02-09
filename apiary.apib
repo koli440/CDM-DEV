@@ -180,13 +180,13 @@ All JSON attribures named with <code>code</code> are values from code table, whi
 ---
 
 # Group Client
-APIs for work with 'Client's
+APIs for work with Clients
 
 ## Get client detail [/selfservice/client]
-Secured service to get client detail on SS BL
+Secured service to get client detail from SS BL
 
 ### Return desired client detail [GET]
-Returns detail of authenticated client.
+Returns detail of authenticated client. Client's detail consists of his name, titles, personal numer (rodné číslo), birth day, birth place, citizenship, gender and tax residency. There are also infromation about his identity document and his contacts. Address type is basic address without any addition. Other addressee is not posible to specify for clients addresses.
 
 + Request
     + Headers
@@ -277,7 +277,7 @@ APIs for work with addresses
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return adresses of client [GET]
-Returns list of all addresses stored in CRM for authenticated client.
+Returns list of all addresses stored in CRM for authenticated client. This resource returns all addresses binded to authenticated client, regardless their [type][Address type].
 
 + Request
     + Headers
@@ -330,7 +330,7 @@ Returns list of all addresses stored in CRM for authenticated client.
 + Response 401 (application/json)
 
 ### Create new address [POST]
-Creates new address in CRM.
+Creates new address in CRM. Following attributes must be specified in request (according to their required / optional specification). You need to specify type of provided address ([see address types][Address type]) . 
 
 | attribute | type | description | required / optional |
 | ------ | ------ | ------ | ------ |

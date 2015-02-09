@@ -1234,6 +1234,26 @@ APIs for work with attachments
 ## Upload Attachments [/selfservice/attachments]
 Upload ID Card attachment
 
+### Attachments List
+Returns id's of all attachments associated with authenticated client and current application
+
++ Request
+    + Headers
+
+            WEB-API-key: 3b569c12-6519-4ce3-a112-559218fe5051
+            Authorization: Bearer vF9dft4qmT
+            Lang: cs
+
++ Response 200 (application/json)
+
+            [
+                { "attachmentId" : 2029390 },
+                { "attachmentId" : 2029391 }
+            ]
+
++ Response 401 (application/json)
+
+
 ### Upload Image [POST]
 This service allows you to upload image of attachment to our server. This is intended for uploading images of identity card. Attachment is allways converted to .pdf on our back-end. In case there are two images uploaded (two calls of this service) our back-end will merge this to one .pdf. Uploaded image should be referenced by returned id.
 

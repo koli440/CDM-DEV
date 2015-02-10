@@ -231,7 +231,8 @@ Returns detail of authenticated client. Client's detail consists of his name, ti
                     "city": "Jaroměř",
                     "district": "Staré město",
                     "zip": 79000,
-                    "countryCode": "CZ"
+                    "countryCode": "CZ",
+                    "isValidated" : true
                     },
                 "contactAddress":
                     {
@@ -243,7 +244,8 @@ Returns detail of authenticated client. Client's detail consists of his name, ti
                     "city": "Litvínov",
                     "district": "Staré město",
                     "zip": 89000,
-                    "countryCode": "CZ"
+                    "countryCode": "CZ",
+                    "isValidated" : true
                     },
                 "primaryPhone": 
                     {
@@ -298,7 +300,8 @@ Returns list of all addresses stored in CRM for authenticated client. This resou
                 "city": "Jaroměř",
                 "district": "Staré město",
                 "zip": 79000,
-                "countryCode": "CZ"
+                "countryCode": "CZ",
+                "isValidated" : true
             },
             {
                 "id" : 528064245,
@@ -309,7 +312,8 @@ Returns list of all addresses stored in CRM for authenticated client. This resou
                 "city": "Praha",
                 "district": "Staré město",
                 "zip": 14000,
-                "countryCode": "CZ"
+                "countryCode": "CZ",
+                "isValidated" : false
             },
             {
                 "id" : 52754243,
@@ -321,7 +325,8 @@ Returns list of all addresses stored in CRM for authenticated client. This resou
                 "district": "Staré město",
                 "zip": 89000,
                 "countryCode": "CZ",
-                "addition" : "Doplněk adresy"
+                "addition" : "Doplněk adresy",
+                "isValidated" : true
             },
             {
                 "id" : 52754242,
@@ -334,7 +339,8 @@ Returns list of all addresses stored in CRM for authenticated client. This resou
                 "zip": 89000,
                 "countryCode": "RU",
                 "addition" : "Doplněk adresy",
-                "differentAddressee" : "Pavel Novák"
+                "differentAddressee" : "Pavel Novák",
+                "isValidated" : true
             }
         ]
         
@@ -412,7 +418,9 @@ Returns list of all addresses of type <code>basic</code> stored in CRM for authe
                 "city": "Jaroměř",
                 "district": "Staré město",
                 "zip": 79000,
-                "countryCode": "CZ"
+                "countryCode": "CZ",
+                "isValidated" : true
+                
             },
             {
                 "id" : 528064245,
@@ -423,7 +431,8 @@ Returns list of all addresses of type <code>basic</code> stored in CRM for authe
                 "city": "Praha",
                 "district": "Staré město",
                 "zip": 14000,
-                "countryCode": "CZ"
+                "countryCode": "CZ",
+                "isValidated" : false
             }
         ]
         
@@ -455,7 +464,8 @@ Returns list of all addresses of type <code>withAddition</code> stored  in CRM f
                 "district": "Staré město",
                 "zip": 89000,
                 "countryCode": "CZ",
-                "addition" : "Doplněk adresy"
+                "addition" : "Doplněk adresy",
+                "isValidated" : true
             }
         ]
         
@@ -488,7 +498,8 @@ Returns list of all addresses of type <code>withDiffAddressee</code> stored in C
                 "zip": 89000,
                 "countryCode": "RU",
                 "addition" : "Doplněk adresy",
-                "differentAddressee" : "Pavel Novák"
+                "differentAddressee" : "Pavel Novák",
+                "isValidated" : true
             }
         ]
         
@@ -533,7 +544,8 @@ Forces storing of address.
                 "zip": 89000,
                 "countryCode": "RU",
                 "addition" : "Doplněk adresy",
-                "differentAddressee" : "Pavel Novák"
+                "differentAddressee" : "Pavel Novák",
+                "isValidated" : true
             }
 
 + Response 200 (application/json)
@@ -741,7 +753,20 @@ Returns detail information of product with <code>productId</code> specified in r
                         "city": "Jaroměř",
                         "district": "Staré město",
                         "zip": 79000,
-                        "countryCode": "CZ"
+                        "countryCode": "CZ",
+                        "isValidated" : true
+                    },
+                    {
+                        "id" : 528064245,
+                        "addressType" : "BASIC",
+                        "street": "Antala staška",
+                        "houseNumber": "567/87",
+                        "orientationNumber": "43B",
+                        "city": "Praha",
+                        "district": "Staré město",
+                        "zip": 14000,
+                        "countryCode": "CZ",
+                        "isValidated" : false
                     }
             }
 
@@ -785,7 +810,8 @@ Fake service for exemple of product with viewType <code>don</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "dealsOverviewEmail" :
                     { 
@@ -804,7 +830,8 @@ Fake service for exemple of product with viewType <code>don</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "portfolioOverviewEmail" : 
                     { 
@@ -823,7 +850,8 @@ Fake service for exemple of product with viewType <code>don</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "statementSeriesEmail" :
                     {
@@ -866,7 +894,8 @@ Fake service for exemple of product with viewType <code>eiger</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     }
             }
 
@@ -905,7 +934,20 @@ Fake service for exemple of product with viewType <code>s24</code>.
                         "city": "Jaroměř",
                         "district": "Staré město",
                         "zip": 79000,
-                        "countryCode": "CZ"
+                        "countryCode": "CZ",
+                        "isValidated" : true
+                    },
+                    {
+                        "id" : 528064245,
+                        "addressType" : "BASIC",
+                        "street": "Antala staška",
+                        "houseNumber": "567/87",
+                        "orientationNumber": "43B",
+                        "city": "Praha",
+                        "district": "Staré město",
+                        "zip": 14000,
+                        "countryCode": "CZ",
+                        "isValidated" : false
                     },
                 "eInvoiceEmails" : 
                     [
@@ -1004,7 +1046,8 @@ Fake service for exemple of product with viewType <code>spz</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "seriesBStatementAddress" :
                     {
@@ -1018,7 +1061,8 @@ Fake service for exemple of product with viewType <code>spz</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "seriesCStatementAddress" :
                     {
@@ -1032,7 +1076,8 @@ Fake service for exemple of product with viewType <code>spz</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     }
             }
 
@@ -1068,7 +1113,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "correspondenceAddress" :
                     {
@@ -1082,7 +1128,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "seriesAStatementAddress" :
                     {
@@ -1096,7 +1143,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "seriesBStatementAddress" :
                     {
@@ -1110,7 +1158,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "seriesCStatementAddress" :
                     {
@@ -1124,7 +1173,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "seriesDStatementAddress" :
                     {
@@ -1138,7 +1188,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "seriesEStatementAddress" :
                     {
@@ -1152,7 +1203,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "seriesFStatementAddress" :
                     {
@@ -1166,7 +1218,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "seriesGStatementAddress" :
                     {
@@ -1180,7 +1233,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "seriesHStatementAddress" :
                     {
@@ -1194,7 +1248,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     },
                 "seriesIStatementAddress" :
                     {
@@ -1208,7 +1263,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "zip": 89000,
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák"
+                        "differentAddressee" : "Pavel Novák",
+                        "isValidated" : true
                     }
             }
 
@@ -1244,7 +1300,8 @@ Fake service for exemple of product with viewType <code>pwc</code>.
                         "district": "Staré město",
                         "zip": 89000,
                         "countryCode": "CZ",
-                        "addition" : "Doplněk adresy"
+                        "addition" : "Doplněk adresy",
+                        "isValidated" : true
                     }
             }
 
@@ -1706,7 +1763,8 @@ Returns detail of saved application. Whole application with fresh data is return
                         "city": "Jaroměř",
                         "district": "Staré město",
                         "zip": 79000,
-                        "countryCode": "CZ"
+                        "countryCode": "CZ",
+                        "isValidated" : true
                         },
                     "contactAddress":
                         {
@@ -1718,7 +1776,8 @@ Returns detail of saved application. Whole application with fresh data is return
                         "city": "Litvínov",
                         "district": "Staré město",
                         "zip": 89000,
-                        "countryCode": "CZ"
+                        "countryCode": "CZ",
+                        "isValidated" : true
                         },
                     "primaryPhone": 
                         {
@@ -1753,7 +1812,8 @@ Returns detail of saved application. Whole application with fresh data is return
                     "city": "Jaroměř",
                     "district": "Staré město",
                     "zip": 79000,
-                    "countryCode": "CZ"
+                    "countryCode": "CZ",
+                    "isValidated" : true
                 },
                 {
                     "id" : 52754243,
@@ -1765,7 +1825,8 @@ Returns detail of saved application. Whole application with fresh data is return
                     "district": "Staré město",
                     "zip": 89000,
                     "countryCode": "CZ",
-                    "addition" : "Doplněk adresy"
+                    "addition" : "Doplněk adresy",
+                    "isValidated" : true
                 },
                 {
                     "id" : 52754242,
@@ -1778,7 +1839,8 @@ Returns detail of saved application. Whole application with fresh data is return
                     "zip": 89000,
                     "countryCode": "RU",
                     "addition" : "Doplněk adresy",
-                    "differentAddressee" : "Pavel Novák"
+                    "differentAddressee" : "Pavel Novák",
+                    "isValidated" : true
                 }
             ],
             "phones" :
@@ -1817,7 +1879,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "city": "Jaroměř",
                             "district": "Staré město",
                             "zip": 79000,
-                            "countryCode": "CZ"
+                            "countryCode": "CZ",
+                            "isValidated" : true
                         }
                 },
                 { 
@@ -1852,7 +1915,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "dealsOverviewEmail" :
                         { 
@@ -1871,7 +1935,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "portfolioOverviewEmail" : 
                         { 
@@ -1890,7 +1955,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "statementSeriesEmail" :
                         {
@@ -1917,7 +1983,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         }
                 },
                 {
@@ -1939,7 +2006,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "city": "Jaroměř",
                             "district": "Staré město",
                             "zip": 79000,
-                            "countryCode": "CZ"
+                            "countryCode": "CZ",
+                            "isValidated" : true
                         },
                     "eInvoiceEmails" : 
                         [
@@ -2027,7 +2095,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "seriesBStatementAddress" :
                         {
@@ -2041,7 +2110,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "seriesCStatementAddress" :
                         {
@@ -2055,7 +2125,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         }
                 },
                 {
@@ -2080,7 +2151,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "correspondenceAddress" :
                         {
@@ -2094,7 +2166,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "seriesAStatementAddress" :
                         {
@@ -2108,7 +2181,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "seriesBStatementAddress" :
                         {
@@ -2122,7 +2196,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "seriesCStatementAddress" :
                         {
@@ -2136,7 +2211,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "seriesDStatementAddress" :
                         {
@@ -2150,7 +2226,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "seriesEStatementAddress" :
                         {
@@ -2164,7 +2241,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "seriesFStatementAddress" :
                         {
@@ -2178,7 +2256,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "seriesGStatementAddress" :
                         {
@@ -2192,7 +2271,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "seriesHStatementAddress" :
                         {
@@ -2206,7 +2286,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         },
                     "seriesIStatementAddress" :
                         {
@@ -2220,7 +2301,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "zip": 89000,
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
-                            "differentAddressee" : "Pavel Novák"
+                            "differentAddressee" : "Pavel Novák",
+                            "isValidated" : true
                         }
                 },
                 {
@@ -2240,7 +2322,8 @@ Returns detail of saved application. Whole application with fresh data is return
                             "district": "Staré město",
                             "zip": 89000,
                             "countryCode": "CZ",
-                            "addition" : "Doplněk adresy"
+                            "addition" : "Doplněk adresy",
+                            "isValidated" : true
                         }
                 }
             ]

@@ -1053,6 +1053,11 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                 "productId" : 1929395,
                 "viewType" : "STARBANK",
                 "role" : "Vlastník",
+                "adviceEmails" : 
+                    [
+                        { "id" : 2345678, "email" : "some@email.eml" },
+                        { "id" : 87654532, "email": "another@email.eml" }
+                    ],
                 "notificationAddress" :
                     {
                         "id" : 52754242,
@@ -1640,6 +1645,11 @@ Saves application for later. After succesfull call application should be in <cod
                         },
                         {
                             "productId" : 1929395,
+                            "adviceEmails" : 
+                                [
+                                    { "id" : 2345678 },
+                                    { "id" : 87654532 }
+                                ],
                             "notificationAddress" : { "id" : 52754242 },
                             "correspondenceAddress" : { "id" : 52754242 },
                             "seriesAStatementAddress" : { "id" : 52754242 },
@@ -2085,6 +2095,11 @@ Returns detail of saved application. Whole application with fresh data is return
                     "productId" : 1929395,
                     "viewType" : "STARBANK",
                     "role" : "Vlastník",
+                    "adviceEmails" : 
+                    [
+                        { "id" : 2345678, "email" : "some@email.eml" },
+                        { "id" : 87654532, "email": "another@email.eml" }
+                    ],
                     "accountNumber" :
                         {
                             "prefix" : "1234",
@@ -2436,6 +2451,11 @@ Finalizes applications and prepare it for authorization. After calling this meth
                         },
                         {
                             "productId" : 1929395,
+                            "adviceEmails" : 
+                                [
+                                    { "id" : 2345678 },
+                                    { "id" : 87654532 }
+                                ],
                             "notificationAddress" : { "id" : 52754242 },
                             "correspondenceAddress" : { "id" : 52754242 },
                             "seriesAStatementAddress" : { "id" : 52754242 },

@@ -1412,7 +1412,7 @@ This method authorizes application and proceeds it to next state in it's life cy
 + Response 401 (application/json)
 
 ### Get authorization summary [GET]
-Returns summary of changes in application for review before authorization itself. It is as whole application and there is attribute "changed" at each changable itemm, which specifiel if value was changed by client or not.
+Returns summary of changes in application for review before authorization itself. It is as whole application and there is attribute "changed" at each changable itemm, which specifies if value was changed by client or not.
 
 + Request
     + Headers
@@ -1424,6 +1424,7 @@ Returns summary of changes in application for review before authorization itself
 + Response 200 (application/json)
 
             {
+            "applicationId" : 1542637347,
             "client" :
             {
                 "firstName": "Jana",

@@ -1412,7 +1412,7 @@ This method authorizes application and proceeds it to next state in it's life cy
 + Response 401 (application/json)
 
 ### Get authorization summary [GET]
-Returns summary of changes in application for review before authorization itself. It is returned in universal format to display information in sections. There is attribute "Changed" in JSON, which specifiel if value was changed by client or not
+Returns summary of changes in application for review before authorization itself. It is as whole application and there is attribute "changed" at each changable itemm, which specifiel if value was changed by client or not.
 
 + Request
     + Headers
@@ -1558,13 +1558,13 @@ Returns summary of changes in application for review before authorization itself
                         },
                     "accountBalanceEmails" :
                         [
-                            { "id" : 2345678, "email" : "some@email.eml", "Changed" : false },
+                            { "id" : 2345678, "email" : "some@email.eml", "changed" : false },
                             { "id" : 87654532, "email": "another@email.eml", "changed" : true }
                         ],
                     "accountBalanceSmsNumbers" :
                         [
-                            { "id" : 12345235, "number" : "+420666123456", "Changed" : false },
-                            { "id" : 745879987, "number": "+420666654321", "Changed" : false }
+                            { "id" : 12345235, "number" : "+420666123456", "changed" : false },
+                            { "id" : 745879987, "number": "+420666654321", "changed" : false }
                         ],
                     "dealsOverviewAddress" :
                         {

@@ -733,6 +733,46 @@ Returns detail information of product with <code>productId</code> specified in r
                         "validated" : false
                     }
             }
+            
++ Response 401 (application/json)
+            
+### Update product [PUT]
+Updates contact information on specified product. It is neccessary to specify products view type (<code>viewType</code>), which defines how is product handled in BL and Bank's systems.
+
++ Parameters
+
+    + productId (required, number, `1234654`) ... ID of requested `product`.
+
++ Request
+    + Headers
+
+            WEB-API-key: 3b569c12-6519-4ce3-a112-559218fe5051
+            Authorization: Bearer vF9dft4qmT
+            Lang: cs
+
+    + Body
+
+            { 
+                "productId" : 1929390,
+                "viewType" : "GENERAL",
+                "contactAddress" :
+                    {
+                        "id" : 528064245,
+                        "addressType" : "BASIC",
+                        "street": "Antala staška",
+                        "houseNumber": "567/87",
+                        "orientationNumber": "43B",
+                        "city": "Praha",
+                        "district": "Staré město",
+                        "zip": 14000,
+                        "countryCode": "CZ",
+                        "validated" : false
+                    }
+            }
+    
++ Response 200 (application/json)
+
++ Response 401 (application/json)
 
 ## Product [/selfservice/products/1929391]
 Fake service for exemple of product with viewType <code>don</code>.

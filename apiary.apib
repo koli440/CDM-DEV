@@ -1969,8 +1969,8 @@ Saves application for later. After succesfull call application should be in <cod
 
 + Response 401 (application/json)
 
-## Application detail [/selfservice/application]
-Operations with applications
+## Finalize application [/selfservice/application/finalize]
+Finalizes application
 
 ### Finalize application [PUT]
 Finalizes applications and prepare it for authorization. After calling this method, application should be in <code>FINISHED</code> state. After that application could be athorized. Validation of whole application on server side occurs. If there are any validation errors, they are returned in response
@@ -1986,7 +1986,26 @@ Finalizes applications and prepare it for authorization. After calling this meth
 
 + Response 401 (application/json)
 
+## Cancel application [/selfservice/application/cancel]
+Cancels application. Application is canceled in our business logic. This should be used only if application was not stored in Bank systems - <code>DATA ENTRY</code> status.
+
 ### Cancel application [DELETE]
+Cancels current application and user can start again from scratch or do not apply at all.
+
++ Request
+    + Headers
+
+            WEB-API-key: 3b569c12-6519-4ce3-a112-559218fe5051
+            Authorization: Bearer vF9dft4qmT
+
++ Response 204 (application/json)
+
++ Response 401 (application/json)
+
+## Application storno [/selfservice/application/storno]
+Cancel application. Application is canceled in our business logic and in bank systems. Application storno is possible only in certain application statuses.
+
+### Storno application [DELETE]
 Cancels current application and user can start again from scratch or do not apply at all.
 
 + Request

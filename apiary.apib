@@ -232,7 +232,7 @@ Returns detail of authenticated client. Client's detail consists of his name, ti
                     "district": "Staré město",
                     "zip": 79000,
                     "countryCode": "CZ",
-                    "isValidated" : true
+                    "validated" : true
                     },
                 "contactAddress":
                     {
@@ -245,7 +245,7 @@ Returns detail of authenticated client. Client's detail consists of his name, ti
                     "district": "Staré město",
                     "zip": 89000,
                     "countryCode": "CZ",
-                    "isValidated" : true
+                    "validated" : true
                     },
                 "primaryPhone": 
                     {
@@ -301,7 +301,7 @@ Returns list of all addresses stored in CRM for authenticated client. This resou
                 "district": "Staré město",
                 "zip": 79000,
                 "countryCode": "CZ",
-                "isValidated" : true
+                "validated" : true
             },
             {
                 "id" : 52754243,
@@ -314,7 +314,7 @@ Returns list of all addresses stored in CRM for authenticated client. This resou
                 "zip": 89000,
                 "countryCode": "CZ",
                 "addition" : "Doplněk adresy",
-                "isValidated" : true
+                "validated" : true
             },
             {
                 "id" : 52754242,
@@ -328,7 +328,7 @@ Returns list of all addresses stored in CRM for authenticated client. This resou
                 "countryCode": "RU",
                 "addition" : "Doplněk adresy",
                 "differentAddressee" : "Pavel Novák",
-                "isValidated" : true
+                "validated" : true
             }
         ]
         
@@ -407,7 +407,7 @@ Returns list of all addresses of type <code>basic</code> stored in CRM for authe
                 "district": "Staré město",
                 "zip": 79000,
                 "countryCode": "CZ",
-                "isValidated" : true
+                "validated" : true
                 
             }
         ]
@@ -441,7 +441,7 @@ Returns list of all addresses of type <code>withAddition</code> stored  in CRM f
                 "zip": 89000,
                 "countryCode": "CZ",
                 "addition" : "Doplněk adresy",
-                "isValidated" : true
+                "validated" : true
             }
         ]
         
@@ -475,7 +475,7 @@ Returns list of all addresses of type <code>withDiffAddressee</code> stored in C
                 "countryCode": "RU",
                 "addition" : "Doplněk adresy",
                 "differentAddressee" : "Pavel Novák",
-                "isValidated" : true
+                "validated" : true
             }
         ]
         
@@ -521,7 +521,7 @@ Forces storing of address.
                 "countryCode": "RU",
                 "addition" : "Doplněk adresy",
                 "differentAddressee" : "Pavel Novák",
-                "isValidated" : true
+                "validated" : true
             }
 
 + Response 200 (application/json)
@@ -730,7 +730,7 @@ Returns detail information of product with <code>productId</code> specified in r
                         "district": "Staré město",
                         "zip": 14000,
                         "countryCode": "CZ",
-                        "isValidated" : false
+                        "validated" : false
                     }
             }
 
@@ -769,7 +769,7 @@ Fake service for exemple of product with viewType <code>don</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "dealsOverviewEmail" :
                     { 
@@ -789,7 +789,7 @@ Fake service for exemple of product with viewType <code>don</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "portfolioOverviewEmail" : 
                     { 
@@ -809,7 +809,7 @@ Fake service for exemple of product with viewType <code>don</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "statementSeriesEmail" :
                     {
@@ -853,7 +853,7 @@ Fake service for exemple of product with viewType <code>eiger</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     }
             }
 
@@ -893,7 +893,7 @@ Fake service for exemple of product with viewType <code>s24</code>.
                         "district": "Staré město",
                         "zip": 79000,
                         "countryCode": "CZ",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "eInvoiceEmailA" : { "id" : 2345678, "email" : "some@email.eml" },
                 "eInvoiceEmailB" : { "id" : 87654532, "email": "another@email.eml" },
@@ -966,7 +966,7 @@ Fake service for exemple of product with viewType <code>spz</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "seriesBStatementAddress" :
                     {
@@ -981,7 +981,7 @@ Fake service for exemple of product with viewType <code>spz</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "seriesCStatementAddress" :
                     {
@@ -996,7 +996,7 @@ Fake service for exemple of product with viewType <code>spz</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     }
             }
 
@@ -1035,7 +1035,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "correspondenceAddress" :
                     {
@@ -1050,7 +1050,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "seriesAStatementAddress" :
                     {
@@ -1065,7 +1065,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "seriesBStatementAddress" :
                     {
@@ -1080,7 +1080,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "seriesCStatementAddress" :
                     {
@@ -1095,7 +1095,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "seriesDStatementAddress" :
                     {
@@ -1110,7 +1110,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "seriesEStatementAddress" :
                     {
@@ -1125,7 +1125,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "seriesFStatementAddress" :
                     {
@@ -1140,7 +1140,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "seriesGStatementAddress" :
                     {
@@ -1155,7 +1155,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "seriesHStatementAddress" :
                     {
@@ -1170,7 +1170,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     },
                 "seriesIStatementAddress" :
                     {
@@ -1185,7 +1185,7 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                         "countryCode": "RU",
                         "addition" : "Doplněk adresy",
                         "differentAddressee" : "Pavel Novák",
-                        "isValidated" : true
+                        "validated" : true
                     }
             }
 
@@ -1222,7 +1222,7 @@ Fake service for exemple of product with viewType <code>pwc</code>.
                         "zip": 89000,
                         "countryCode": "CZ",
                         "addition" : "Doplněk adresy",
-                        "isValidated" : true
+                        "validated" : true
                     }
             }
 
@@ -1441,7 +1441,7 @@ Returns summary of changes in application for review before authorization itself
                         "district": "Staré město",
                         "zip": 79000,
                         "countryCode": "CZ",
-                        "isValidated" : true
+                        "validated" : true
                         },
                     "residentAddressChanged" : false,
                     "contactAddress":
@@ -1455,7 +1455,7 @@ Returns summary of changes in application for review before authorization itself
                         "district": "Staré město",
                         "zip": 89000,
                         "countryCode": "CZ",
-                        "isValidated" : true
+                        "validated" : true
                         },
                     "contactAddressChanged" : false,
                     "primaryPhone": 
@@ -1507,7 +1507,7 @@ Returns summary of changes in application for review before authorization itself
                             "district": "Staré město",
                             "zip": 79000,
                             "countryCode": "CZ",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "contactAddressChanged" : false
                 },
@@ -1538,7 +1538,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "dealsOverviewAddressChanged" : false,
                     "dealsOverviewEmail" :
@@ -1560,7 +1560,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "portfolioOverviewAddressChanged" : true,
                     "portfolioOverviewEmail" : 
@@ -1582,7 +1582,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "statementSeriesAddressChanged" : true,
                     "statementSeriesEmail" :
@@ -1613,7 +1613,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "pinRecoveryAddressChanged" : false
                 },
@@ -1638,7 +1638,7 @@ Returns summary of changes in application for review before authorization itself
                             "district": "Staré město",
                             "zip": 79000,
                             "countryCode": "CZ",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "contactAddressChanged" : false,
                     "eInvoiceEmailA" : { "id" : 2345678, "email" : "some@email.eml", "changed" : false },
@@ -1701,7 +1701,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesAStatementAddressChanged" : true,
                     "seriesBStatementAddress" :
@@ -1717,7 +1717,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesBStatementAddressChanged" : false,
                     "seriesCStatementAddress" :
@@ -1733,7 +1733,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesCStatementAddressChanged" : false
                 },
@@ -1762,7 +1762,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "notificationAddressChanged" : true,
                     "correspondenceAddress" :
@@ -1778,7 +1778,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "correspondenceAddressChanged" : false,
                     "seriesAStatementAddress" :
@@ -1794,7 +1794,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesAStatementAddressChanged" : false,
                     "seriesBStatementAddress" :
@@ -1810,7 +1810,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesBStatementAddressChanged" : true,
                     "seriesCStatementAddress" :
@@ -1826,7 +1826,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesCStatementAddressChanged" : false,
                     "seriesDStatementAddress" :
@@ -1842,7 +1842,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesDStatementAddressChanged" : true,
                     "seriesEStatementAddress" :
@@ -1858,7 +1858,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesEStatementAddressChanged" : false,
                     "seriesFStatementAddress" :
@@ -1874,7 +1874,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesFStatementAddressChanged" : false,
                     "seriesGStatementAddress" :
@@ -1890,7 +1890,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesGStatementAddressChanged" : false,
                     "seriesHStatementAddress" :
@@ -1906,7 +1906,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesHStatementAddressChanged" : true,
                     "seriesIStatementAddress" :
@@ -1922,7 +1922,7 @@ Returns summary of changes in application for review before authorization itself
                             "countryCode": "RU",
                             "addition" : "Doplněk adresy",
                             "differentAddressee" : "Pavel Novák",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "seriesIStatementAddressChanged" : false
                 },
@@ -1945,7 +1945,7 @@ Returns summary of changes in application for review before authorization itself
                             "zip": 89000,
                             "countryCode": "CZ",
                             "addition" : "Doplněk adresy",
-                            "isValidated" : true
+                            "validated" : true
                         },
                     "cardPinDeliveryAddressChanged" : false
                 }

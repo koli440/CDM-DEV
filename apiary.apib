@@ -1955,7 +1955,7 @@ Returns summary of changes in application for review before authorization itself
 ## Save Application [/selfservice/application/save]
 Save application for later.
 
-### Save application [POST]
+### Save application [PUT]
 Saves application for later. After succesfull call application should be in <code>SAVED</code> state. Whole application must be uploaded by this method. Validation of whole application on server side occurs. If there are any validation errors, they are returned in response.
 
 + Request
@@ -1972,7 +1972,7 @@ Saves application for later. After succesfull call application should be in <cod
 ## Application detail [/selfservice/application]
 Operations with applications
 
-### Finalize application [POST]
+### Finalize application [PUT]
 Finalizes applications and prepare it for authorization. After calling this method, application should be in <code>FINISHED</code> state. After that application could be athorized. Validation of whole application on server side occurs. If there are any validation errors, they are returned in response
 
 + Request

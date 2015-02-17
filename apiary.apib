@@ -272,6 +272,95 @@ Returns detail of authenticated client. Client's detail consists of his name, ti
 
 + Response 401 (application/json)
 
+### Update client detail [PUT]
+Updates client's details and contact informations. Client's detail consists of his name, titles, personal numer (rodné číslo), birth day, birth place, citizenship, gender and tax residency. There are also infromation about his identity document and his contacts. Address type is basic address without any addition. Other addressee is not posible to specify for clients addresses.
+
++ Request
+    + Headers
+
+            WEB-API-key: 3b569c12-6519-4ce3-a112-559218fe5051
+            Authorization: Bearer vF9dft4qmT
+            Lang: cs
+
+    + Body
+
+        {
+            "firstName": "Jana",
+            "lastName": "Princeznová",
+            "birthName" : "",
+            "titleBefore": "Ing.",
+            "titleAfter": "Ph.D.",
+            "personalNumber": "7807054421",
+            "birthDate": "1987-07-05",
+            "birthPlace": "Praha",
+            "birthCountryCode": "CZ",
+            "gender": "MALE",
+            "citizenshipCountryCode": "CZ",
+            "taxResidentCountryCode": "CZ",
+            "identityDocument": 
+                {
+                    "type": "ID_CARD",
+                    "number": "12164246",
+                    "issueDate": "2011-01-20",
+                    "expireDate": "2019-01-20",
+                    "issuer": "MěÚ Jaroměř",
+                    "issueCountryCode" : "CZ"
+                },
+            "contacts" : 
+                {
+                "residentAddress":
+                    {
+                    "id" : 528064244,
+                    "addressType" : "BASIC", 
+                    "street": "Polská",
+                    "houseNumber": "22",
+                    "orientationNumber": "3C",
+                    "city": "Jaroměř",
+                    "district": "Staré město",
+                    "zip": 79000,
+                    "countryCode": "CZ",
+                    "validated" : true
+                    },
+                "contactAddress":
+                    {
+                    "id" : 52754243,
+                    "addressType" : "BASIC", 
+                    "street": "Finská",
+                    "houseNumber": "145",
+                    "orientationNumber": "387",
+                    "city": "Litvínov",
+                    "district": "Staré město",
+                    "zip": 89000,
+                    "countryCode": "CZ",
+                    "validated" : true
+                    },
+                "primaryPhone": 
+                    {
+                        "id" : 12345235,
+                        "number" : "+420666123456"
+                    },
+                "secondaryPhone": 
+                    {
+                        "id" : 745879987,
+                        "number": "+420666654321"
+                    },
+                "primaryEmail": 
+                    { 
+                        "id" : 2345678,
+                        "email" : "some@email.eml"
+                    },
+                "secondaryEmail" :
+                    {
+                        "id" : 87654532,
+                        "email": "another@email.eml"
+                    }
+            }
+        }
+
++ Response 200 (application/json)
+
++ Response 401 (application/json)
+
 # Group Addresses
 APIs for work with addresses
 

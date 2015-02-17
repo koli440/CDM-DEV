@@ -752,16 +752,10 @@ Fake service for exemple of product with viewType <code>don</code>.
                 "productId" : 1929391,
                 "viewType" : "DON",
                 "role" : "Vlastník",
-                "accountBalanceEmails" :
-                    [
-                        { "id" : 2345678, "email" : "some@email.eml" },
-                        { "id" : 87654532, "email": "another@email.eml" }
-                    ],
-                "accountBalanceSmsNumbers" :
-                    [
-                        { "id" : 12345235, "number" : "+420666123456" },
-                        { "id" : 745879987, "number": "+420666654321" }
-                    ],
+                "accountBalanceEmailA" : { "id" : 2345678, "email" : "some@email.eml" },
+                "accountBalanceEmailB" : { "id" : 87654532, "email": "another@email.eml" },
+                "accountBalanceSmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
+                "accountBalanceSmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
                 "dealsOverviewAddress" :
                     {
                         "id" : 52754242,
@@ -901,18 +895,12 @@ Fake service for exemple of product with viewType <code>s24</code>.
                         "countryCode": "CZ",
                         "isValidated" : true
                     },
-                "eInvoiceEmails" : 
-                    [
-                        { "id" : 2345678, "email" : "some@email.eml" },
-                        { "id" : 87654532, "email": "another@email.eml" },
-                        { "id" : 78355820, "email": "yet.another@email.eml" }
-                    ],
-                "eInvoicePhoneNumbers" : 
-                    [
-                        { "id" : 12345235, "number" : "+420666123456" },
-                        { "id" : 745879987, "number": "+420666654321" },
-                        { "id" : 987656782, "number": "+420666656543" }
-                    ]
+                "eInvoiceEmailA" : { "id" : 2345678, "email" : "some@email.eml" },
+                "eInvoiceEmailB" : { "id" : 87654532, "email": "another@email.eml" },
+                "eInvoiceEmailC" : { "id" : 78355820, "email": "yet.another@email.eml" },
+                "eInvoicePhoneNumberA" : { "id" : 12345235, "number" : "+420666123456" },
+                "eInvoicePhoneNumberB" : { "id" : 745879987, "number": "+420666654321" },
+                "eInvoicePhoneNumberC" : { "id" : 987656782, "number": "+420666656543" }
             }
 
 + Response 401 (application/json)
@@ -935,57 +923,36 @@ Fake service for exemple of product with viewType <code>spz</code>.
                 "productId" : 1929394,
                 "viewType" : "SPZ",
                 "role" : "Vlastník",
-                "accountBalanceEmails" : 
-                    [
-                        { "id" : 2345678, "email" : "some@email.eml" },
-                        { "id" : 87654532, "email": "another@email.eml" }
-                    ],
+                "accountBalanceEmailA" : { "id" : 2345678, "email" : "some@email.eml" },
+                "accountBalanceEmailB" : { "id" : 87654532, "email": "another@email.eml" },
                 "accountBalanceSmsNumber" : { "id" : 12345235, "number" : "+420666123456" },
-                "adviceEmails" : 
-                    [
-                        { "id" : 2345678, "email" : "some@email.eml" },
-                        { "id" : 87654532, "email": "another@email.eml" }
-                    ],
-                "cardOperationSmsNumbers" : 
-                    [
-                        { "id" : 12345235, "number" : "+420666123456" },
-                        { "id" : 745879987, "number": "+420666654321" },
-                        { "id" : 987656782, "number": "+420666656543" },
-                        { "id" : 987656783, "number": "+420666656542" },
-                        { "id" : 987656784, "number": "+420666626543" }
-                    ],
-                "failedDirectDebitSmsNumber" : 
-                    [
-                        { "id" : 12345235, "number" : "+420666123456" },
-                        { "id" : 745879987, "number": "+420666654321" },
-                        { "id" : 987656782, "number": "+420666656543" },
-                        { "id" : 987656783, "number": "+420666656542" },
-                        { "id" : 987656784, "number": "+420666626543" }
-                    ],
-                "overdraftMaturitySmsNumber" :
-                    [
-                        { "id" : 12345235, "number" : "+420666123456" },
-                        { "id" : 745879987, "number": "+420666654321" },
-                        { "id" : 987656782, "number": "+420666656543" },
-                        { "id" : 987656783, "number": "+420666656542" },
-                        { "id" : 987656784, "number": "+420666626543" }
-                    ],
-                "failedRecurringPaymentSmsNumber" :
-                    [
-                        { "id" : 12345235, "number" : "+420666123456" },
-                        { "id" : 745879987, "number": "+420666654321" },
-                        { "id" : 987656782, "number": "+420666656543" },
-                        { "id" : 987656783, "number": "+420666656542" },
-                        { "id" : 987656784, "number": "+420666626543" }
-                    ],
-                "failedSinglePaymentSmsNumber" :
-                    [
-                        { "id" : 12345235, "number" : "+420666123456" },
-                        { "id" : 745879987, "number": "+420666654321" },
-                        { "id" : 987656782, "number": "+420666656543" },
-                        { "id" : 987656783, "number": "+420666656542" },
-                        { "id" : 987656784, "number": "+420666626543" }
-                    ],
+                "adviceEmailA" : { "id" : 2345678, "email" : "some@email.eml" },
+                "adviceEmailB" : { "id" : 87654532, "email": "another@email.eml" },
+                "cardOperationSmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
+                "cardOperationSmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
+                "cardOperationSmsNumberC" : { "id" : 987656782, "number": "+420666656543" },
+                "cardOperationSmsNumberD" : { "id" : 987656783, "number": "+420666656542" },
+                "cardOperationSmsNumberE" : { "id" : 987656784, "number": "+420666626543" },
+                "failedDirectDebitSmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
+                "failedDirectDebitSmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
+                "failedDirectDebitSmsNumberC" : { "id" : 987656782, "number": "+420666656543" },
+                "failedDirectDebitSmsNumberD" : { "id" : 987656783, "number": "+420666656542" },
+                "failedDirectDebitSmsNumberE" : { "id" : 987656784, "number": "+420666626543" },
+                "overdraftMaturitySmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
+                "overdraftMaturitySmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
+                "overdraftMaturitySmsNumberC" : { "id" : 987656782, "number": "+420666656543" },
+                "overdraftMaturitySmsNumberD" : { "id" : 987656783, "number": "+420666656542" },
+                "overdraftMaturitySmsNumberE" : { "id" : 987656784, "number": "+420666626543" },
+                "failedRecurringPaymentSmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
+                "failedRecurringPaymentSmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
+                "failedRecurringPaymentSmsNumberC" : { "id" : 987656782, "number": "+420666656543" },
+                "failedRecurringPaymentSmsNumberD" : { "id" : 987656783, "number": "+420666656542" },
+                "failedRecurringPaymentSmsNumberE" : { "id" : 987656784, "number": "+420666626543" },
+                "failedSinglePaymentSmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
+                "failedSinglePaymentSmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
+                "failedSinglePaymentSmsNumberC" : { "id" : 987656782, "number": "+420666656543" },
+                "failedSinglePaymentSmsNumberD" : { "id" : 987656783, "number": "+420666656542" },
+                "failedSinglePaymentSmsNumberE" : { "id" : 987656784, "number": "+420666626543" },
                 "seriesAStatementAddress" :
                     {
                         "id" : 52754242,
@@ -1053,11 +1020,8 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                 "productId" : 1929395,
                 "viewType" : "STARBANK",
                 "role" : "Vlastník",
-                "adviceEmails" : 
-                    [
-                        { "id" : 2345678, "email" : "some@email.eml" },
-                        { "id" : 87654532, "email": "another@email.eml" }
-                    ],
+                "adviceEmailA" : { "id" : 2345678, "email" : "some@email.eml" },
+                "adviceEmailB" : { "id" : 87654532, "email": "another@email.eml" },
                 "notificationAddress" :
                     {
                         "id" : 52754242,
@@ -1557,16 +1521,10 @@ Returns summary of changes in application for review before authorization itself
                             "number" : "9876543210",
                             "bankCode" : "0800"
                         },
-                    "accountBalanceEmails" :
-                        [
-                            { "id" : 2345678, "email" : "some@email.eml", "changed" : false },
-                            { "id" : 87654532, "email": "another@email.eml", "changed" : true }
-                        ],
-                    "accountBalanceSmsNumbers" :
-                        [
-                            { "id" : 12345235, "number" : "+420666123456", "changed" : false },
-                            { "id" : 745879987, "number": "+420666654321", "changed" : false }
-                        ],
+                    "accountBalanceEmailA" : { "id" : 2345678, "email" : "some@email.eml", "changed" : false },
+                    "accountBalanceEmailB" : { "id" : 87654532, "email": "another@email.eml", "changed" : true },
+                    "accountBalanceSmsNumberA" : { "id" : 12345235, "number" : "+420666123456", "changed" : false },
+                    "accountBalanceSmsNumberB" : { "id" : 745879987, "number": "+420666654321", "changed" : false },
                     "dealsOverviewAddress" :
                         {
                             "id" : 52754242,
@@ -1683,18 +1641,12 @@ Returns summary of changes in application for review before authorization itself
                             "isValidated" : true
                         },
                     "contactAddressChanged" : false,
-                    "eInvoiceEmails" : 
-                        [
-                            { "id" : 2345678, "email" : "some@email.eml", "changed" : false },
-                            { "id" : 87654532, "email": "another@email.eml", "changed" : true },
-                            { "id" : 78355820, "email": "yet.another@email.eml", "changed" : true }
-                        ],
-                    "eInvoicePhoneNumbers" : 
-                        [
-                            { "id" : 12345235, "number" : "+420666123456", "changed" : true },
-                            { "id" : 745879987, "number": "+420666654321", "changed" : true },
-                            { "id" : 987656782, "number": "+420666656543", "changed" : true }
-                        ]
+                    "eInvoiceEmailA" : { "id" : 2345678, "email" : "some@email.eml", "changed" : false },
+                    "eInvoiceEmailB" : { "id" : 87654532, "email": "another@email.eml", "changed" : true },
+                    "eInvoiceEmailC" : { "id" : 78355820, "email": "yet.another@email.eml", "changed" : true },
+                    "eInvoicePhoneNumberA" : { "id" : 12345235, "number" : "+420666123456", "changed" : true },
+                    "eInvoicePhoneNumberB" : { "id" : 745879987, "number": "+420666654321", "changed" : true },
+                    "eInvoicePhoneNumberC" : { "id" : 987656782, "number": "+420666656543", "changed" : true }
                 },
                 {
                     "productId" : 1929394,
@@ -1706,57 +1658,36 @@ Returns summary of changes in application for review before authorization itself
                             "number" : "9876543210",
                             "bankCode" : "0800"
                         },
-                    "accountBalanceEmails" : 
-                        [
-                            { "id" : 2345678, "email" : "some@email.eml", "changed" : false },
-                            { "id" : 87654532, "email": "another@email.eml", "changed" : true }
-                        ],
+                    "accountBalanceEmailA" : { "id" : 2345678, "email" : "some@email.eml", "changed" : false },
+                    "accountBalanceEmailB" : { "id" : 87654532, "email": "another@email.eml", "changed" : true },
                     "accountBalanceSmsNumber" : { "id" : 12345235, "number" : "+420666123456", "changed" : false },
-                    "adviceEmails" : 
-                        [
-                            { "id" : 2345678, "email" : "some@email.eml", "changed" : false },
-                            { "id" : 87654532, "email": "another@email.eml", "changed" : true }
-                        ],
-                    "cardOperationSmsNumbers" : 
-                        [
-                            { "id" : 12345235, "number" : "+420666123456", "changed" : false },
-                            { "id" : 745879987, "number": "+420666654321", "changed" : false },
-                            { "id" : 987656782, "number": "+420666656543", "changed" : true },
-                            { "id" : 987656783, "number": "+420666656542", "changed" : true },
-                            { "id" : 987656784, "number": "+420666626543", "changed" : true }
-                        ],
-                    "failedDirectDebitSmsNumber" : 
-                        [
-                            { "id" : 12345235, "number" : "+420666123456", "changed" : false },
-                            { "id" : 745879987, "number": "+420666654321", "changed" : true },
-                            { "id" : 987656782, "number": "+420666656543", "changed" : true },
-                            { "id" : 987656783, "number": "+420666656542", "changed" : false },
-                            { "id" : 987656784, "number": "+420666626543", "changed" : false }
-                        ],
-                    "overdraftMaturitySmsNumber" :
-                        [
-                            { "id" : 12345235, "number" : "+420666123456", "changed" : true },
-                            { "id" : 745879987, "number": "+420666654321", "changed" : true },
-                            { "id" : 987656782, "number": "+420666656543", "changed" : true },
-                            { "id" : 987656783, "number": "+420666656542", "changed" : false },
-                            { "id" : 987656784, "number": "+420666626543", "changed" : false }
-                        ],
-                    "failedRecurringPaymentSmsNumber" :
-                        [
-                            { "id" : 12345235, "number" : "+420666123456", "changed" : true },
-                            { "id" : 745879987, "number": "+420666654321", "changed" : false },
-                            { "id" : 987656782, "number": "+420666656543", "changed" : false },
-                            { "id" : 987656783, "number": "+420666656542", "changed" : false },
-                            { "id" : 987656784, "number": "+420666626543", "changed" : false }
-                        ],
-                    "failedSinglePaymentSmsNumber" :
-                        [
-                            { "id" : 12345235, "number" : "+420666123456", "changed" : true },
-                            { "id" : 745879987, "number": "+420666654321", "changed" : true },
-                            { "id" : 987656782, "number": "+420666656543", "changed" : true },
-                            { "id" : 987656783, "number": "+420666656542", "changed" : false },
-                            { "id" : 987656784, "number": "+420666626543", "changed" : false }
-                        ],
+                    "adviceEmailA" : { "id" : 2345678, "email" : "some@email.eml", "changed" : false },
+                    "adviceEmailB" : { "id" : 87654532, "email": "another@email.eml", "changed" : true },
+                    "cardOperationSmsNumberA" : { "id" : 12345235, "number" : "+420666123456", "changed" : false },
+                    "cardOperationSmsNumberB" : { "id" : 745879987, "number": "+420666654321", "changed" : false },
+                    "cardOperationSmsNumberC" : { "id" : 987656782, "number": "+420666656543", "changed" : true },
+                    "cardOperationSmsNumberD" : { "id" : 987656783, "number": "+420666656542", "changed" : true },
+                    "cardOperationSmsNumberE" : { "id" : 987656784, "number": "+420666626543", "changed" : true },
+                    "failedDirectDebitSmsNumberA" : { "id" : 12345235, "number" : "+420666123456", "changed" : false },
+                    "failedDirectDebitSmsNumberB" : { "id" : 745879987, "number": "+420666654321", "changed" : true },
+                    "failedDirectDebitSmsNumberC" : { "id" : 987656782, "number": "+420666656543", "changed" : true },
+                    "failedDirectDebitSmsNumberD" : { "id" : 987656783, "number": "+420666656542", "changed" : false },
+                    "failedDirectDebitSmsNumberE" : { "id" : 987656784, "number": "+420666626543", "changed" : false },
+                    "overdraftMaturitySmsNumberA" : { "id" : 12345235, "number" : "+420666123456", "changed" : true },
+                    "overdraftMaturitySmsNumberB" : { "id" : 745879987, "number": "+420666654321", "changed" : true },
+                    "overdraftMaturitySmsNumberC" : { "id" : 987656782, "number": "+420666656543", "changed" : true },
+                    "overdraftMaturitySmsNumberD" : { "id" : 987656783, "number": "+420666656542", "changed" : false },
+                    "overdraftMaturitySmsNumberE" : { "id" : 987656784, "number": "+420666626543", "changed" : false },
+                    "failedRecurringPaymentSmsNumberA" : { "id" : 12345235, "number" : "+420666123456", "changed" : true },
+                    "failedRecurringPaymentSmsNumberB" : { "id" : 745879987, "number": "+420666654321", "changed" : false },
+                    "failedRecurringPaymentSmsNumberC" : { "id" : 987656782, "number": "+420666656543", "changed" : false },
+                    "failedRecurringPaymentSmsNumberD" : { "id" : 987656783, "number": "+420666656542", "changed" : false },
+                    "failedRecurringPaymentSmsNumberE" : { "id" : 987656784, "number": "+420666626543", "changed" : false },
+                    "failedSinglePaymentSmsNumberA" : { "id" : 12345235, "number" : "+420666123456", "changed" : true },
+                    "failedSinglePaymentSmsNumberB" : { "id" : 745879987, "number": "+420666654321", "changed" : true },
+                    "failedSinglePaymentSmsNumberC" : { "id" : 987656782, "number": "+420666656543", "changed" : true },
+                    "failedSinglePaymentSmsNumberD" : { "id" : 987656783, "number": "+420666656542", "changed" : false },
+                    "failedSinglePaymentSmsNumberE" : { "id" : 987656784, "number": "+420666626543", "changed" : false },
                     "seriesAStatementAddress" :
                         {
                             "id" : 52754242,
@@ -1810,11 +1741,8 @@ Returns summary of changes in application for review before authorization itself
                     "productId" : 1929395,
                     "viewType" : "STARBANK",
                     "role" : "Vlastník",
-                    "adviceEmails" : 
-                    [
-                        { "id" : 2345678, "email" : "some@email.eml", "changed" : true },
-                        { "id" : 87654532, "email": "another@email.eml", "changed" : false }
-                    ],
+                    "adviceEmailA" : { "id" : 2345678, "email" : "some@email.eml", "changed" : true },
+                    "adviceEmailB" : { "id" : 87654532, "email": "another@email.eml", "changed" : false },
                     "accountNumber" :
                         {
                             "prefix" : "1234",
@@ -2083,16 +2011,10 @@ Saves application for later. After succesfull call application should be in <cod
                         },
                         { 
                             "productId" : 1929391,
-                            "accountBalanceEmails" :
-                                [
-                                    { "id" : 2345678 },
-                                    { "id" : 87654532 }
-                                ],
-                            "accountBalanceSmsNumbers" :
-                                [
-                                    { "id" : 12345235 },
-                                    { "id" : 745879987 }
-                                ],
+                            "accountBalanceEmailA" : { "id" : 2345678 },
+                            "accountBalanceEmailB" : { "id" : 87654532 },
+                            "accountBalanceSmsNumberA" : { "id" : 12345235 },
+                            "accountBalanceSmsNumberB" : { "id" : 745879987 },
                             "dealsOverviewAddress" : { "id" : 52754242 },
                             "dealsOverviewEmail" : { "id" : 2345678 },
                             "portfolioOverviewAddress" : { "id" : 52754242 },
@@ -2108,35 +2030,21 @@ Saves application for later. After succesfull call application should be in <cod
                         {
                             "productId" : 1929393,
                             "contactAddress" : { "id" : 528064244 },
-                            "eInvoiceEmails" : 
-                                [
-                                    { "id" : 2345678 },
-                                    { "id" : 87654532 },
-                                    { "id" : 78355820 }
-                                ],
-                            "eInvoicePhoneNumbers" : 
-                                [
-                                    { "id" : 12345235 },
-                                    { "id" : 745879987 },
-                                    { "id" : 987656782 }
-                                ]
+                            "eInvoiceEmailA" : { "id" : 2345678 },
+                            "eInvoiceEmailB" : { "id" : 87654532 },
+                            "eInvoiceEmailC" : { "id" : 78355820 },
+                            "eInvoicePhoneNumberA" : { "id" : 12345235 },
+                            "eInvoicePhoneNumberB" : { "id" : 745879987 },
+                            "eInvoicePhoneNumberC" : { "id" : 987656782 }
                         },
                         {
                             "productId" : 1929394,
-                            "accountBalanceEmails" : 
-                                [
-                                    { "id" : 2345678 },
-                                    { "id" : 87654532 }
-                                ],
+                            "accountBalanceEmailA" : { "id" : 2345678 },
+                            "accountBalanceEmailB" : { "id" : 87654532 },
                             "accountBalanceSmsNumber" : { "id" : 12345235 },
-                            "adviceEmails" : 
-                                [
-                                    { "id" : 2345678 },
-                                    { "id" : 87654532 }
-                                ],
-                            "cardOperationSmsNumbers" : 
-                                [
-                                    { "id" : 12345235 },
+                            "adviceEmailA" : { "id" : 2345678 },
+                            "adviceEmailB" : { "id" : 87654532 },
+                            "cardOperationSmsNumberA" : { "id" : 12345235 },
                                     { "id" : 745879987 },
                                     { "id" : 987656782 },
                                     { "id" : 987656783 },

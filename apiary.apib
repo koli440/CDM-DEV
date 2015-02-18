@@ -308,52 +308,12 @@ Updates client's details and contact informations. Client's detail consists of h
                 },
             "contacts" : 
                 {
-                "residentAddress":
-                    {
-                    "id" : 528064244,
-                    "addressType" : "BASIC", 
-                    "street": "Polská",
-                    "houseNumber": "22",
-                    "orientationNumber": "3C",
-                    "city": "Jaroměř",
-                    "district": "Staré město",
-                    "zip": 79000,
-                    "countryCode": "CZ",
-                    "validated" : true
-                    },
-                "contactAddress":
-                    {
-                    "id" : 52754243,
-                    "addressType" : "BASIC", 
-                    "street": "Finská",
-                    "houseNumber": "145",
-                    "orientationNumber": "387",
-                    "city": "Litvínov",
-                    "district": "Staré město",
-                    "zip": 89000,
-                    "countryCode": "CZ",
-                    "validated" : true
-                    },
-                "primaryPhone": 
-                    {
-                        "id" : 12345235,
-                        "number" : "+420666123456"
-                    },
-                "secondaryPhone": 
-                    {
-                        "id" : 745879987,
-                        "number": "+420666654321"
-                    },
-                "primaryEmail": 
-                    { 
-                        "id" : 2345678,
-                        "email" : "some@email.eml"
-                    },
-                "secondaryEmail" :
-                    {
-                        "id" : 87654532,
-                        "email": "another@email.eml"
-                    }
+                "residentAddress": { "id" : 528064244 },
+                "contactAddress": { "id" : 52754243 },
+                "primaryPhone": { "id" : 12345235 },
+                "secondaryPhone": { "id" : 745879987 },
+                "primaryEmail": { "id" : 2345678 },
+                "secondaryEmail" : { "id" : 87654532 }
             }
         }
 
@@ -844,19 +804,7 @@ Updates contact information on specified product. It is neccessary to specify pr
             { 
                 "productId" : 1929390,
                 "viewType" : "GENERAL",
-                "contactAddress" :
-                    {
-                        "id" : 528064245,
-                        "addressType" : "BASIC",
-                        "street": "Antala staška",
-                        "houseNumber": "567/87",
-                        "orientationNumber": "43B",
-                        "city": "Praha",
-                        "district": "Staré město",
-                        "zip": 14000,
-                        "countryCode": "CZ",
-                        "validated" : false
-                    }
+                "contactAddress" : { "id" : 528064245 }
             }
     
 + Response 200 (application/json)
@@ -964,70 +912,16 @@ Fake service for exemple of product with viewType <code>don</code>.
                 "productId" : 1929391,
                 "viewType" : "DON",
                 "role" : "Vlastník",
-                "accountBalanceEmailA" : { "id" : 2345678, "email" : "some@email.eml" },
-                "accountBalanceEmailB" : { "id" : 87654532, "email": "another@email.eml" },
-                "accountBalanceSmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
-                "accountBalanceSmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
-                "dealsOverviewAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "dealsOverviewEmail" :
-                    { 
-                        "id" : 2345678,
-                        "email" : "some@email.eml" 
-                    },
-                "portfolioOverviewAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "portfolioOverviewEmail" : 
-                    { 
-                        "id" : 2345678,
-                        "email" : "some@email.eml" 
-                    },
-                "statementSeriesAddress" : 
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "statementSeriesEmail" :
-                    {
-                        "id" : 2345678,
-                        "email" : "some@email.eml"
-                    }
+                "accountBalanceEmailA" : { "id" : 2345678 },
+                "accountBalanceEmailB" : { "id" : 87654532 },
+                "accountBalanceSmsNumberA" : { "id" : 12345235 },
+                "accountBalanceSmsNumberB" : { "id" : 745879987 },
+                "dealsOverviewAddress" : { "id" : 52754242 },
+                "dealsOverviewEmail" : { "id" : 2345678 },
+                "portfolioOverviewAddress" : { "id" : 52754242 },
+                "portfolioOverviewEmail" : { "id" : 2345678 },
+                "statementSeriesAddress" : { "id" : 52754242 },
+                "statementSeriesEmail" : { "id" : 2345678 }
             }
 
 + Response 200 (application/json)
@@ -1087,21 +981,7 @@ Fake service for exemple of product with viewType <code>eiger</code>.
                 "productId" : 1929392,
                 "viewType" : "EIGER",
                 "issueNewCard" : true,
-                "pinRecoveryAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    }
+                "pinRecoveryAddress" : { "id" : 52754242 }
             }
 
 + Response 200 (application/json)
@@ -1169,30 +1049,14 @@ Fake service for exemple of product with viewType <code>s24</code>.
                 "productId" : 1929393,
                 "viewType" : "S24",
                 "role" : "Vlastník",
-                "loginAuthorizationNumber" :
-                    {
-                        "id" : 745879987,
-                        "number": "+420666654321"
-                    },
-                "contactAddress" :
-                    {
-                        "id" : 528064244,
-                        "addressType" : "BASIC",
-                        "street": "Polská",
-                        "houseNumber": "22",
-                        "orientationNumber": "3C",
-                        "city": "Jaroměř",
-                        "district": "Staré město",
-                        "zip": 79000,
-                        "countryCode": "CZ",
-                        "validated" : true
-                    },
-                "eInvoiceEmailA" : { "id" : 2345678, "email" : "some@email.eml" },
-                "eInvoiceEmailB" : { "id" : 87654532, "email": "another@email.eml" },
-                "eInvoiceEmailC" : { "id" : 78355820, "email": "yet.another@email.eml" },
-                "eInvoicePhoneNumberA" : { "id" : 12345235, "number" : "+420666123456" },
-                "eInvoicePhoneNumberB" : { "id" : 745879987, "number": "+420666654321" },
-                "eInvoicePhoneNumberC" : { "id" : 987656782, "number": "+420666656543" }
+                "loginAuthorizationNumber" : { "id" : 745879987 },
+                "contactAddress" : { "id" : 528064244 },
+                "eInvoiceEmailA" : { "id" : 2345678 },
+                "eInvoiceEmailB" : { "id" : 87654532 },
+                "eInvoiceEmailC" : { "id" : 78355820 },
+                "eInvoicePhoneNumberA" : { "id" : 12345235 },
+                "eInvoicePhoneNumberB" : { "id" : 745879987 },
+                "eInvoicePhoneNumberC" : { "id" : 987656782 }
             }
 
 + Response 200 (application/json)
@@ -1311,81 +1175,39 @@ Fake service for exemple of product with viewType <code>spz</code>.
                 "productId" : 1929394,
                 "viewType" : "SPZ",
                 "role" : "Vlastník",
-                "accountBalanceEmailA" : { "id" : 2345678, "email" : "some@email.eml" },
-                "accountBalanceEmailB" : { "id" : 87654532, "email": "another@email.eml" },
-                "accountBalanceSmsNumber" : { "id" : 12345235, "number" : "+420666123456" },
-                "adviceEmailA" : { "id" : 2345678, "email" : "some@email.eml" },
-                "adviceEmailB" : { "id" : 87654532, "email": "another@email.eml" },
-                "cardOperationSmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
-                "cardOperationSmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
-                "cardOperationSmsNumberC" : { "id" : 987656782, "number": "+420666656543" },
-                "cardOperationSmsNumberD" : { "id" : 987656783, "number": "+420666656542" },
-                "cardOperationSmsNumberE" : { "id" : 987656784, "number": "+420666626543" },
-                "failedDirectDebitSmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
-                "failedDirectDebitSmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
-                "failedDirectDebitSmsNumberC" : { "id" : 987656782, "number": "+420666656543" },
-                "failedDirectDebitSmsNumberD" : { "id" : 987656783, "number": "+420666656542" },
-                "failedDirectDebitSmsNumberE" : { "id" : 987656784, "number": "+420666626543" },
-                "overdraftMaturitySmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
-                "overdraftMaturitySmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
-                "overdraftMaturitySmsNumberC" : { "id" : 987656782, "number": "+420666656543" },
-                "overdraftMaturitySmsNumberD" : { "id" : 987656783, "number": "+420666656542" },
-                "overdraftMaturitySmsNumberE" : { "id" : 987656784, "number": "+420666626543" },
-                "failedRecurringPaymentSmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
-                "failedRecurringPaymentSmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
-                "failedRecurringPaymentSmsNumberC" : { "id" : 987656782, "number": "+420666656543" },
-                "failedRecurringPaymentSmsNumberD" : { "id" : 987656783, "number": "+420666656542" },
-                "failedRecurringPaymentSmsNumberE" : { "id" : 987656784, "number": "+420666626543" },
-                "failedSinglePaymentSmsNumberA" : { "id" : 12345235, "number" : "+420666123456" },
-                "failedSinglePaymentSmsNumberB" : { "id" : 745879987, "number": "+420666654321" },
-                "failedSinglePaymentSmsNumberC" : { "id" : 987656782, "number": "+420666656543" },
-                "failedSinglePaymentSmsNumberD" : { "id" : 987656783, "number": "+420666656542" },
-                "failedSinglePaymentSmsNumberE" : { "id" : 987656784, "number": "+420666626543" },
-                "seriesAStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "seriesBStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "seriesCStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    }
+                "accountBalanceEmailA" : { "id" : 2345678 },
+                "accountBalanceEmailB" : { "id" : 87654532 },
+                "accountBalanceSmsNumber" : { "id" : 12345235 },
+                "adviceEmailA" : { "id" : 2345678 },
+                "adviceEmailB" : { "id" : 87654532 },
+                "cardOperationSmsNumberA" : { "id" : 12345235 },
+                "cardOperationSmsNumberB" : { "id" : 745879987 },
+                "cardOperationSmsNumberC" : { "id" : 987656782 },
+                "cardOperationSmsNumberD" : { "id" : 987656783 },
+                "cardOperationSmsNumberE" : { "id" : 987656784 },
+                "failedDirectDebitSmsNumberA" : { "id" : 12345235 },
+                "failedDirectDebitSmsNumberB" : { "id" : 745879987 },
+                "failedDirectDebitSmsNumberC" : { "id" : 987656782 },
+                "failedDirectDebitSmsNumberD" : { "id" : 987656783 },
+                "failedDirectDebitSmsNumberE" : { "id" : 987656784 },
+                "overdraftMaturitySmsNumberA" : { "id" : 12345235 },
+                "overdraftMaturitySmsNumberB" : { "id" : 745879987 },
+                "overdraftMaturitySmsNumberC" : { "id" : 987656782 },
+                "overdraftMaturitySmsNumberD" : { "id" : 987656783 },
+                "overdraftMaturitySmsNumberE" : { "id" : 987656784 },
+                "failedRecurringPaymentSmsNumberA" : { "id" : 12345235 },
+                "failedRecurringPaymentSmsNumberB" : { "id" : 745879987 },
+                "failedRecurringPaymentSmsNumberC" : { "id" : 987656782 },
+                "failedRecurringPaymentSmsNumberD" : { "id" : 987656783 },
+                "failedRecurringPaymentSmsNumberE" : { "id" : 987656784 },
+                "failedSinglePaymentSmsNumberA" : { "id" : 12345235 },
+                "failedSinglePaymentSmsNumberB" : { "id" : 745879987 },
+                "failedSinglePaymentSmsNumberC" : { "id" : 987656782 },
+                "failedSinglePaymentSmsNumberD" : { "id" : 987656783 },
+                "failedSinglePaymentSmsNumberE" : { "id" : 987656784 },
+                "seriesAStatementAddress" : { "id" : 52754242 },
+                "seriesBStatementAddress" : { "id" : 52754242 },
+                "seriesCStatementAddress" : { "id" : 52754242 }
             }
 
 + Response 200 (application/json)
@@ -1596,173 +1418,19 @@ Fake service for exemple of product with viewType <code>starBank</code>.
                 "productId" : 1929395,
                 "viewType" : "STARBANK",
                 "role" : "Vlastník",
-                "adviceEmailA" : { "id" : 2345678, "email" : "some@email.eml" },
-                "adviceEmailB" : { "id" : 87654532, "email": "another@email.eml" },
-                "notificationAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "correspondenceAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "seriesAStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "seriesBStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "seriesCStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "seriesDStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "seriesEStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "seriesFStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "seriesGStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "seriesHStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    },
-                "seriesIStatementAddress" :
-                    {
-                        "id" : 52754242,
-                        "addressType" : "DIFF_ADDRESSEE",
-                        "street": "Krymská",
-                        "houseNumber": "793",
-                        "orientationNumber": "56",
-                        "city": "Moskva",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "RU",
-                        "addition" : "Doplněk adresy",
-                        "differentAddressee" : "Pavel Novák",
-                        "validated" : true
-                    }
+                "adviceEmailA" : { "id" : 2345678 },
+                "adviceEmailB" : { "id" : 87654532 },
+                "notificationAddress" : { "id" : 52754242 },
+                "correspondenceAddress" : { "id" : 52754242 },
+                "seriesAStatementAddress" : { "id" : 52754242 },
+                "seriesBStatementAddress" : { "id" : 52754242 },
+                "seriesCStatementAddress" : { "id" : 52754242 },
+                "seriesDStatementAddress" : { "id" : 52754242 },
+                "seriesEStatementAddress" : { "id" : 52754242 },
+                "seriesFStatementAddress" : { "id" : 52754242 },
+                "seriesGStatementAddress" : { "id" : 52754242 },
+                "seriesHStatementAddress" : { "id" : 52754242 },
+                "seriesIStatementAddress" : { "id" : 52754242 }
             }
 
 + Response 200 (application/json)
@@ -1822,20 +1490,7 @@ Fake service for exemple of product with viewType <code>pwc</code>.
                 "viewType" : "PWC",
                 "role" : "Vlastník",
                 "issueNewCard" : true,
-                "cardPinDeliveryAddress" : 
-                    {
-                        "id" : 52754243,
-                        "addressType" : "ADDITION",
-                        "street": "Finská",
-                        "houseNumber": "145",
-                        "orientationNumber": "387",
-                        "city": "Litvínov",
-                        "district": "Staré město",
-                        "zip": 89000,
-                        "countryCode": "CZ",
-                        "addition" : "Doplněk adresy",
-                        "validated" : true
-                    }
+                "cardPinDeliveryAddress" : { "id" : 52754243 }
             }
 
 + Response 200 (application/json)

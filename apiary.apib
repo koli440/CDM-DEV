@@ -284,38 +284,38 @@ Updates client's details and contact informations. Client's detail consists of h
 
     + Body
 
-        {
-            "firstName": "Jana",
-            "lastName": "Princeznová",
-            "birthName" : "",
-            "titleBefore": "Ing.",
-            "titleAfter": "Ph.D.",
-            "personalNumber": "7807054421",
-            "birthDate": "1987-07-05",
-            "birthPlace": "Praha",
-            "birthCountryCode": "CZ",
-            "gender": "MALE",
-            "citizenshipCountryCode": "CZ",
-            "taxResidentCountryCode": "CZ",
-            "identityDocument": 
-                {
-                    "type": "ID_CARD",
-                    "number": "12164246",
-                    "issueDate": "2011-01-20",
-                    "expireDate": "2019-01-20",
-                    "issuer": "MěÚ Jaroměř",
-                    "issueCountryCode" : "CZ"
-                },
-            "contacts" : 
-                {
-                "residentAddress": { "id" : 528064244 },
-                "contactAddress": { "id" : 52754243 },
-                "primaryPhone": { "id" : 12345235 },
-                "secondaryPhone": { "id" : 745879987 },
-                "primaryEmail": { "id" : 2345678 },
-                "secondaryEmail" : { "id" : 87654532 }
+            {
+                "firstName": "Jana",
+                "lastName": "Princeznová",
+                "birthName" : "",
+                "titleBefore": "Ing.",
+                "titleAfter": "Ph.D.",
+                "personalNumber": "7807054421",
+                "birthDate": "1987-07-05",
+                "birthPlace": "Praha",
+                "birthCountryCode": "CZ",
+                "gender": "MALE",
+                "citizenshipCountryCode": "CZ",
+                "taxResidentCountryCode": "CZ",
+                "identityDocument": 
+                    {
+                        "type": "ID_CARD",
+                        "number": "12164246",
+                        "issueDate": "2011-01-20",
+                        "expireDate": "2019-01-20",
+                        "issuer": "MěÚ Jaroměř",
+                        "issueCountryCode" : "CZ"
+                    },
+                "contacts" : 
+                    {
+                    "residentAddress": { "id" : 528064244 },
+                    "contactAddress": { "id" : 52754243 },
+                    "primaryPhone": { "id" : 12345235 },
+                    "secondaryPhone": { "id" : 745879987 },
+                    "primaryEmail": { "id" : 2345678 },
+                    "secondaryEmail" : { "id" : 87654532 }
+                }
             }
-        }
 
 + Response 200 (application/json)
 
@@ -977,6 +977,7 @@ Fake service for exemple of product with viewType <code>eiger</code>.
             Lang: cs
 
     + Body
+    
             {
                 "productId" : 1929392,
                 "viewType" : "EIGER",

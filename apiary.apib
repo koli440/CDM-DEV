@@ -2257,7 +2257,7 @@ Finalizes applications and prepare it for authorization. After calling this meth
 + Response 401 (application/json)
 
 ## Cancel application [/selfservice/application/cancel]
-Cancels application. Application is canceled in our business logic. This should be used only if application was not stored in Bank systems - <code>DATA ENTRY</code> status.
+Cancels application. Application is canceled in our business logic. This should be used only if application was not stored in Bank systems - <code>CREATED</code> status. Application in state <code>DATA ENTRY</code> do not need to be canceled.
 
 ### Cancel application [DELETE]
 Cancels current application and user can start again from scratch or do not apply at all.
@@ -2276,7 +2276,7 @@ Cancels current application and user can start again from scratch or do not appl
 Cancel application. Application is canceled in our business logic and in bank systems. Application storno is possible only in certain application statuses.
 
 ### Storno application [DELETE]
-Cancels current application (in CDM BL and bank systems) and user can start again from scratch or do not apply at all.
+Cancels current application (in CDM BL and bank systems) and user can start again from scratch or do not apply at all. Application must be in <code>AUTHORIZED</code> or <code>READY</code> state.
 
 + Request
     + Headers

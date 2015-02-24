@@ -179,6 +179,29 @@ All JSON attribures named with <code>code</code> are values from code table, whi
 
 ---
 
+# Group technology services
+APIs for technology dependent informations regarding this software application.
+
+## Get server version [/selfservice/version]
+Endpoint to get version of currently deployed Back-end application.
+
+### Return server version [GET]
+Returns version and build time of currently deployed Back-end application.
+
++ Request
+    + Headers
+
+            WEB-API-key: 3b569c12-6519-4ce3-a112-559218fe5051
+
++ Response 200 (application/json)
+
+            {
+                "version":"1.0.0-SNAPSHOT",
+                "buildTime":"2015-02-24 13:20:34 UTC"
+            }
+
++ Response 401 (application/json)
+
 # Group Client
 APIs for work with Clients
 

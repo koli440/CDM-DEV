@@ -758,7 +758,7 @@ Returns list of all products, that have any relation to authenticated client. Th
 
             [
                 { "productId" : 1929390, "businessName" : "Běžný produkt", "additionalHeader" : "1234-9876543210/0800", "viewType" : "GENERAL" },
-                { "productId" : 1929391, "businessName" : "Investiční produkt", "additionalHeader" : "1234-9876543210/0800", "viewType" : "DON" },
+                { "productId" : 1929391, "businessName" : "Majetkové účty", "additionalHeader" : "", "viewType" : "DON" },
                 { "productId" : 1929392, "businessName" : "Karta", "additionalHeader" : "5380 34** **** 1453", "viewType" : "EIGER" },
                 { "productId" : 1929393, "businessName" : "Internet Banking", "additionalHeader" : "", "viewType" : "S24" },
                 { "productId" : 1929394, "businessName" : "Účet", "additionalHeader" : "1234-9876543210/0800", "viewType" : "SPZ" },
@@ -1891,6 +1891,8 @@ Returns summary of changes in application for review before authorization itself
                 { 
                     "productId" : 1929390,
                     "viewType" : "GENERAL",
+                    "businessName" : "Běžný produkt",
+                    "additionalHeader" : "1234-9876543210/0800",
                     "role" : "Vlastník",
                     "accountNumber" :
                         {
@@ -1916,6 +1918,8 @@ Returns summary of changes in application for review before authorization itself
                 { 
                     "productId" : 1929391,
                     "viewType" : "DON",
+                    "Majetkové účty",
+                    "additionalHeader" : "",
                     "common" :
                     {
                         "emailAddress" :
@@ -1929,7 +1933,7 @@ Returns summary of changes in application for review before authorization itself
                         {
                             "productId" : 1929691,
                             "role" : "Vlastník",
-                            "accountNumber" : "1234-9876543210/0800",
+                            "accountNumber" : "9876543210",
                             "accountAddress" :
                             {
                                 "id" : 52754242,
@@ -1975,7 +1979,7 @@ Returns summary of changes in application for review before authorization itself
                         {
                             "productId" : 1929491,
                             "role" : "Vlastník",
-                            "accountNumber" : "1234-9876543210/0800",
+                            "accountNumber" : "9876543210",
                             "accountAddress" :
                             {
                                 "id" : 52754242,
@@ -2021,7 +2025,7 @@ Returns summary of changes in application for review before authorization itself
                         {
                             "productId" : 1929591,
                             "role" : "Vlastník",
-                            "accountNumber" : "1234-9876543210/0800",
+                            "accountNumber" : "9876543210",
                             "accountAddress" :
                             {
                                 "id" : 52754242,
@@ -2069,6 +2073,8 @@ Returns summary of changes in application for review before authorization itself
                 {
                     "productId" : 1929392,
                     "viewType" : "EIGER",
+                    "businessName" : "Karta",
+                    "additionalHeader" : "5380 34** **** 1453",
                     "role" : "Vlastník",
                     "cardNumber" : "5380 34** **** 1453",
                     "3dSecurePhoneNumber" : "+420 666 777 888",
@@ -2094,6 +2100,8 @@ Returns summary of changes in application for review before authorization itself
                 {
                     "productId" : 1929393,
                     "viewType" : "S24",
+                    "businessName" : "Internet Banking",
+                    "additionalHeader" : "",
                     "role" : "Vlastník",
                     "loginAuthorizationNumber" :
                         {
@@ -2125,6 +2133,8 @@ Returns summary of changes in application for review before authorization itself
                 {
                     "productId" : 1929394,
                     "viewType" : "SPZ",
+                    "businessName" : "Účet",
+                    "additionalHeader" : "1234-9876543210/0800",
                     "role" : "Vlastník",
                     "accountNumber" :
                         {
@@ -2214,6 +2224,8 @@ Returns summary of changes in application for review before authorization itself
                 {
                     "productId" : 1929395,
                     "viewType" : "STARBANK",
+                    "businessName" : "Účet",
+                    "additionalHeader" : "1234-9876543210/0800",
                     "role" : "Vlastník",
                     "adviceEmailA" : { "id" : 2345678, "email" : "some@email.eml", "changed" : true },
                     "adviceEmailB" : { "id" : 87654532, "email": "another@email.eml", "changed" : false },
@@ -2403,6 +2415,8 @@ Returns summary of changes in application for review before authorization itself
                 {
                     "productId" : 1929396,
                     "viewType" : "PWC",
+                    "businessName" : "Karta",
+                    "additionalHeader" : "5380 34** **** 1453",
                     "role" : "Vlastník",
                     "cardNumber" : "5380 34** **** 1453",
                     "issueNewCard" : true,

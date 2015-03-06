@@ -809,7 +809,7 @@ Returns detail information of product with <code>productId</code> specified in r
 + Response 401 (application/json)
             
 ### Update product [PUT]
-Updates contact information on specified product. It is neccessary to specify products view type (<code>viewType</code>), which defines how is product handled in BL and Bank's systems.
+Updates contact information on specified product.
 
 + Parameters
 
@@ -825,8 +825,6 @@ Updates contact information on specified product. It is neccessary to specify pr
     + Body
 
             { 
-                "productId" : 1929390,
-                "viewType" : "GENERAL",
                 "contactAddress" : { "id" : 528064245 }
             }
     
@@ -1016,8 +1014,6 @@ Fake service for example of product with viewType <code>don</code>.
     + Body
 
             {
-                "productId" : 1929391,
-                "viewType" : "DON",
                 "common" :
                 {
                     "emailAddress" : { "id" : 2345678}
@@ -1115,8 +1111,6 @@ Fake service for example of product with viewType <code>eiger</code>.
     + Body
     
             {
-                "productId" : 1929392,
-                "viewType" : "EIGER",
                 "issueNewCard" : true,
                 "pinRecoveryAddress" : { "id" : 52754242 }
             }
@@ -1183,8 +1177,6 @@ Fake service for example of product with viewType <code>s24</code>.
     + Body
 
             {
-                "productId" : 1929393,
-                "viewType" : "S24",
                 "loginAuthorizationNumber" : { "id" : 745879987 },
                 "contactAddress" : { "id" : 528064244 },
                 "eInvoiceEmailA" : { "id" : 2345678 },
@@ -1308,8 +1300,6 @@ Fake service for example of product with viewType <code>spz</code>.
     + Body
 
             {
-                "productId" : 1929394,
-                "viewType" : "SPZ",
                 "accountBalanceEmailA" : { "id" : 2345678 },
                 "accountBalanceEmailB" : { "id" : 87654532 },
                 "accountBalanceSmsNumber" : { "id" : 12345235 },
@@ -1550,8 +1540,6 @@ Fake service for example of product with viewType <code>starBank</code>.
     + Body
 
             {
-                "productId" : 1929395,
-                "viewType" : "STARBANK",
                 "adviceEmailA" : { "id" : 2345678 },
                 "adviceEmailB" : { "id" : 87654532 },
                 "notificationAddress" : { "id" : 52754242 },
@@ -1620,8 +1608,6 @@ Fake service for example of product with viewType <code>pwc</code>.
     + Body
 
             {
-                "productId" : 1929396,
-                "viewType" : "PWC",
                 "issueNewCard" : true,
                 "cardPinDeliveryAddress" : { "id" : 52754243 }
             }

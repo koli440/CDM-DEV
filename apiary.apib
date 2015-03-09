@@ -486,7 +486,7 @@ Returns list of all addresses of type <code>basic</code> stored in CRM for authe
         
 + Response 401 (application/json)
 
-## Get client addresses [/selfservice/addresses/withAddition]
+## Get client addresses [/selfservice/addresses/addition]
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return adresses of client with addition [GET]
@@ -519,7 +519,7 @@ Returns list of all addresses of type <code>withAddition</code> stored  in CRM f
         
 + Response 401 (application/json)
 
-## Get client addresses [/selfservice/addresses/withDiffAddressee]
+## Get client addresses [/selfservice/addresses/diff-addressee]
 Secured service used to obtain client addresses registered in CRM. 
 
 ### Return adresses of client [GET]
@@ -582,7 +582,6 @@ Forces storing of address.
     + Body
     
             {
-                "id" : 52754242,
                 "addressType" : "DIFF_ADDRESSEE",
                 "street": "Krymská",
                 "houseNumber": "793",
@@ -593,7 +592,6 @@ Forces storing of address.
                 "countryCode": "RU",
                 "addition" : "Doplněk adresy",
                 "differentAddressee" : "Pavel Novák",
-                "validated" : true
             }
 
 + Response 200 (application/json)
